@@ -1,0 +1,47 @@
+name: Set Up Telegram Alert Chat
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_chat_id:
+        description: "Optional group chat ID for sending a test message"
+        required: false
+        default: ""
+        type: string
+
+jobs:
+  find-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show group chat IDs seen by the bot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          set -euo pipefail
+          groups="$(curl --fail --silent --show-error \
+            "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getUpdates" \
+            | jq -r '
+                .result[]
+                | (.message // .channel_post // .my_chat_member)
+                | select(.chat.type != "private")
+                | "\(.chat.type): \(.chat.title // "(без названия)") | TELEGRAM_CHAT_ID=\(.chat.id)"
+              ' \
+            | sort -u)"
+          if [ -z "$groups" ]; then
+            echo "Группы не найдены. Добавьте бота в группу и отправьте /start в этой группе, затем запустите workflow ещё раз."
+          else
+            echo "Найденные чаты:"
+            echo "$groups"
+          fi
+
+      - name: Send optional test message
+        if: ${{ inputs.test_chat_id != '' }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TARGET_CHAT_ID: ${{ inputs.test_chat_id }}
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --request POST \
+            "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TARGET_CHAT_ID}" \
+            --data-urlencode "text=✅ Тест: бот успешно подключён к этому чату."

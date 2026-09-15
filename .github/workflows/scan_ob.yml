@@ -1,0 +1,65 @@
+name: Scan Daily Order Blocks
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only write planned Telegram messages to the log"
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: ob-state
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install requests pandas
+
+      - name: Check OKX USDT Swap API
+        run: |
+          curl --fail --silent --show-error \
+            "https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=1Dutc&limit=2"
+
+      - name: Download closed daily candles
+        run: python scripts/download_data.py
+
+      - name: Find and notify new Order Blocks
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          MIN_OB_SCORE: "4"
+          NEW_OB_LOOKBACK_DAYS: "3"
+          RSI_PERIOD: "14"
+          DIVERGENCE_PIVOT_LEFT: "5"
+          DIVERGENCE_PIVOT_RIGHT: "5"
+          DIVERGENCE_MIN_BARS: "5"
+          DIVERGENCE_MAX_BARS: "60"
+          DIVERGENCE_LOOKBACK_DAYS: "3"
+        run: python scripts/scan_obs.py
+
+      - name: Save downloaded candles and zone state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw
+          test ! -d data/state || git add data/state
+          git diff --cached --quiet || git commit -m "Update daily OB state"
+          git push

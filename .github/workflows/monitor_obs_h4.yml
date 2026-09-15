@@ -1,0 +1,47 @@
+name: Monitor Active H4 Order Blocks
+
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only print planned Telegram messages to the log"
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: h4-ob-state
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install requests pandas
+      - name: Monitor active H4 Order Blocks
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          MAX_ZONE_AGE_HOURS: "1080"
+        run: python scripts/monitor_obs_h4.py
+      - name: Save H4 OB monitor state
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -f data/state/active_obs_h4.json ]; then
+            git add data/state/active_obs_h4.json
+          fi
+          git diff --cached --quiet || git commit -m "Update H4 Order Block monitor state"
+          git push

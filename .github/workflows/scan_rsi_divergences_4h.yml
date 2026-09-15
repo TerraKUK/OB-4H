@@ -50,11 +50,19 @@ jobs:
           RSI_MIN_BARS: "5"
           RSI_MAX_BARS: "60"
         run: python scripts/scan_divergences_h4.py
+      - name: Scan new strong H4 Order Blocks
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          MIN_OB_SCORE: "4"
+          NEW_OB_LOOKBACK_HOURS: "12"
+        run: python scripts/scan_obs_h4.py
       - name: Save H4 scanner state
         if: ${{ inputs.dry_run != true }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw_h4 data/state/rsi_divergences_h4.json
+          git add data/raw_h4 data/state/rsi_divergences_h4.json data/state/active_obs_h4.json
           git diff --cached --quiet || git commit -m "Update H4 RSI divergence state"
           git push

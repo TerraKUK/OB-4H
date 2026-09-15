@@ -36,6 +36,18 @@ class OrderBlock:
         return data
 
 
+def _timestamp_label(value: object, timeframe: str) -> str:
+    """Use exact times on intraday charts while preserving D1 signal IDs."""
+    timestamp = pd.Timestamp(value)
+    if timestamp.tzinfo is None:
+        timestamp = timestamp.tz_localize("UTC")
+    else:
+        timestamp = timestamp.tz_convert("UTC")
+    if timeframe.upper() == "1D":
+        return timestamp.date().isoformat()
+    return timestamp.isoformat().replace("+00:00", "Z")
+
+
 def prepare_indicators(df: pd.DataFrame) -> pd.DataFrame:
     """Add confirmed 3-bar fractals, EMA100/200 and ATR(20)."""
     result = df.copy().reset_index(drop=True)
@@ -150,8 +162,9 @@ def find_all_obs(df: pd.DataFrame, symbol: str, timeframe: str = "1D") -> list[O
                     score, reasons, atr = _score_ob(df, ob_index, index, "bullish", top, bottom)
                     blocks.append(OrderBlock(
                         symbol, timeframe, "bullish", top, bottom,
-                        str(df.at[ob_index, "ts"])[:10], str(df.at[index, "ts"])[:10],
-                        str(df.at[fractal["index"], "ts"])[:10], atr, score, reasons,
+                        _timestamp_label(df.at[ob_index, "ts"], timeframe),
+                        _timestamp_label(df.at[index, "ts"], timeframe),
+                        _timestamp_label(df.at[fractal["index"], "ts"], timeframe), atr, score, reasons,
                     ))
             fractal_highs.remove(fractal)
 
@@ -171,8 +184,9 @@ def find_all_obs(df: pd.DataFrame, symbol: str, timeframe: str = "1D") -> list[O
                     score, reasons, atr = _score_ob(df, ob_index, index, "bearish", top, bottom)
                     blocks.append(OrderBlock(
                         symbol, timeframe, "bearish", top, bottom,
-                        str(df.at[ob_index, "ts"])[:10], str(df.at[index, "ts"])[:10],
-                        str(df.at[fractal["index"], "ts"])[:10], atr, score, reasons,
+                        _timestamp_label(df.at[ob_index, "ts"], timeframe),
+                        _timestamp_label(df.at[index, "ts"], timeframe),
+                        _timestamp_label(df.at[fractal["index"], "ts"], timeframe), atr, score, reasons,
                     ))
             fractal_lows.remove(fractal)
     return blocks
@@ -180,10 +194,16 @@ def find_all_obs(df: pd.DataFrame, symbol: str, timeframe: str = "1D") -> list[O
 
 def has_been_touched_or_invalidated(df: pd.DataFrame, block: OrderBlock) -> str:
     """Return armed, touched or invalidated after the BOS candle."""
-    bos_dates = df.index[df["ts"].astype(str).str.startswith(block.bos_time)].tolist()
-    if not bos_dates:
+    timestamps = pd.to_datetime(df["ts"], utc=True)
+    bos_timestamp = pd.Timestamp(block.bos_time)
+    if bos_timestamp.tzinfo is None:
+        bos_timestamp = bos_timestamp.tz_localize("UTC")
+    else:
+        bos_timestamp = bos_timestamp.tz_convert("UTC")
+    bos_indices = df.index[timestamps == bos_timestamp].tolist()
+    if not bos_indices:
         return "armed"
-    for index in range(bos_dates[0] + 1, len(df)):
+    for index in range(bos_indices[0] + 1, len(df)):
         high, low = float(df.at[index, "high"]), float(df.at[index, "low"])
         if block.direction == "bullish" and low <= block.bottom:
             return "invalidated"

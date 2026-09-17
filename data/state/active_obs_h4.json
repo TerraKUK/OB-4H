@@ -411,6 +411,33 @@
       "top": 0.001763,
       "touched_at": "2026-09-17T10:20:23.774843+00:00"
     },
+    "GALAUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T08:00:00Z": {
+      "atr": 4.820000000000002e-05,
+      "bos_time": "2026-09-17T08:00:00Z",
+      "bottom": 0.00157,
+      "created_at": "2026-09-17T08:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-09-15T12:00:00Z",
+      "id": "GALAUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T08:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-16T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 4,
+      "status": "armed",
+      "symbol": "GALAUSDT",
+      "timeframe": "4H",
+      "top": 0.001619
+    },
     "GRAMUSDT-4H-bearish-2026-09-14T16:00:00Z-2026-09-15T12:00:00Z": {
       "atr": 0.015349999999999997,
       "bos_time": "2026-09-15T12:00:00Z",
@@ -528,6 +555,33 @@
       "timeframe": "4H",
       "top": 6.422
     },
+    "LTCUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T08:00:00Z": {
+      "atr": 0.8175000000000001,
+      "bos_time": "2026-09-17T08:00:00Z",
+      "bottom": 50.17,
+      "created_at": "2026-09-17T08:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-09-15T12:00:00Z",
+      "id": "LTCUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T08:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-16T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "status": "armed",
+      "symbol": "LTCUSDT",
+      "timeframe": "4H",
+      "top": 50.84
+    },
     "NEARUSDT-4H-bullish-2026-09-13T20:00:00Z-2026-09-17T00:00:00Z": {
       "atr": 0.0982,
       "bos_time": "2026-09-17T00:00:00Z",
@@ -552,6 +606,34 @@
         "compact zone"
       ],
       "score": 4,
+      "status": "armed",
+      "symbol": "NEARUSDT",
+      "timeframe": "4H",
+      "top": 2.327
+    },
+    "NEARUSDT-4H-bullish-2026-09-13T20:00:00Z-2026-09-17T08:00:00Z": {
+      "atr": 0.10339999999999998,
+      "bos_time": "2026-09-17T08:00:00Z",
+      "bottom": 2.28,
+      "created_at": "2026-09-17T08:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-09-11T12:00:00Z",
+      "id": "NEARUSDT-4H-bullish-2026-09-13T20:00:00Z-2026-09-17T08:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-13T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
       "status": "armed",
       "symbol": "NEARUSDT",
       "timeframe": "4H",
@@ -598,7 +680,7 @@
       "last_price": 0.3501,
       "notifications": {
         "approach": true,
-        "confirmed": false,
+        "confirmed": true,
         "new": true,
         "touch": true
       },
@@ -610,7 +692,7 @@
         "compact zone"
       ],
       "score": 4,
-      "status": "touched",
+      "status": "confirmed",
       "symbol": "ONDOUSDT",
       "timeframe": "4H",
       "top": 0.3607,
@@ -628,7 +710,7 @@
       "last_price": 0.3501,
       "notifications": {
         "approach": true,
-        "confirmed": false,
+        "confirmed": true,
         "new": true,
         "touch": true
       },
@@ -641,7 +723,7 @@
         "compact zone"
       ],
       "score": 5,
-      "status": "touched",
+      "status": "confirmed",
       "symbol": "ONDOUSDT",
       "timeframe": "4H",
       "top": 0.3607,
@@ -947,6 +1029,33 @@
       "id": "UNIUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T04:00:00Z",
       "last_checked_at": "2026-09-17T10:20:23.774843+00:00",
       "last_price": 6.774,
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-16T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "status": "armed",
+      "symbol": "UNIUSDT",
+      "timeframe": "4H",
+      "top": 6.382
+    },
+    "UNIUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T08:00:00Z": {
+      "atr": 0.29995000000000005,
+      "bos_time": "2026-09-17T08:00:00Z",
+      "bottom": 5.985,
+      "created_at": "2026-09-17T08:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-09-15T08:00:00Z",
+      "id": "UNIUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T08:00:00Z",
       "notifications": {
         "approach": false,
         "confirmed": false,

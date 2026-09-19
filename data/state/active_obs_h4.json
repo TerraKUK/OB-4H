@@ -90,6 +90,33 @@
       "timeframe": "4H",
       "top": 0.08768
     },
+    "1INCHUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T00:00:00Z": {
+      "atr": 0.001804,
+      "bos_time": "2026-09-19T00:00:00Z",
+      "bottom": 0.08602,
+      "created_at": "2026-09-19T00:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-09-06T20:00:00Z",
+      "id": "1INCHUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T00:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-16T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "status": "armed",
+      "symbol": "1INCHUSDT",
+      "timeframe": "4H",
+      "top": 0.08768
+    },
     "AAVEUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-18T00:00:00Z": {
       "atr": 3.8574999999999973,
       "bos_time": "2026-09-18T00:00:00Z",
@@ -148,6 +175,60 @@
       "symbol": "AAVEUSDT",
       "timeframe": "4H",
       "top": 120.09
+    },
+    "AAVEUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T00:00:00Z": {
+      "atr": 3.960500000000002,
+      "bos_time": "2026-09-19T00:00:00Z",
+      "bottom": 115.69,
+      "created_at": "2026-09-19T00:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-09-06T00:00:00Z",
+      "id": "AAVEUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T00:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-16T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "status": "armed",
+      "symbol": "AAVEUSDT",
+      "timeframe": "4H",
+      "top": 120.09
+    },
+    "ADAUSDT-4H-bullish-2026-08-30T20:00:00Z-2026-09-19T00:00:00Z": {
+      "atr": 0.0054850000000000055,
+      "bos_time": "2026-09-19T00:00:00Z",
+      "bottom": 0.1892,
+      "created_at": "2026-09-19T00:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-08-23T20:00:00Z",
+      "id": "ADAUSDT-4H-bullish-2026-08-30T20:00:00Z-2026-09-19T00:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-08-30T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "status": "armed",
+      "symbol": "ADAUSDT",
+      "timeframe": "4H",
+      "top": 0.2031
     },
     "APTUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-18T00:00:00Z": {
       "atr": 0.021134999999999998,
@@ -442,6 +523,33 @@
       "symbol": "ARBUSDT",
       "timeframe": "4H",
       "top": 0.16557
+    },
+    "AVAXUSDT-4H-bullish-2026-06-19T16:00:00Z-2026-09-19T00:00:00Z": {
+      "atr": 0.17390000000000003,
+      "bos_time": "2026-09-19T00:00:00Z",
+      "bottom": 5.671,
+      "created_at": "2026-09-19T00:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-06-03T08:00:00Z",
+      "id": "AVAXUSDT-4H-bullish-2026-06-19T16:00:00Z-2026-09-19T00:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-06-19T16:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "status": "armed",
+      "symbol": "AVAXUSDT",
+      "timeframe": "4H",
+      "top": 6.116
     },
     "AXSUSDT-4H-bullish-2026-08-30T20:00:00Z-2026-09-18T00:00:00Z": {
       "atr": 0.019720000000000005,
@@ -955,7 +1063,7 @@
       "last_price": 21.37,
       "notifications": {
         "approach": true,
-        "confirmed": false,
+        "confirmed": true,
         "new": true,
         "touch": true
       },
@@ -967,7 +1075,7 @@
         "compact zone"
       ],
       "score": 4,
-      "status": "touched",
+      "status": "confirmed",
       "symbol": "COMPUSDT",
       "timeframe": "4H",
       "top": 21.6,
@@ -1719,6 +1827,34 @@
       "timeframe": "4H",
       "top": 5.296
     },
+    "JUPUSDT-4H-bullish-2026-06-10T20:00:00Z-2026-09-19T00:00:00Z": {
+      "atr": 0.008769999999999997,
+      "bos_time": "2026-09-19T00:00:00Z",
+      "bottom": 0.1437,
+      "created_at": "2026-09-19T00:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-05-10T20:00:00Z",
+      "id": "JUPUSDT-4H-bullish-2026-06-10T20:00:00Z-2026-09-19T00:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-06-10T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "status": "armed",
+      "symbol": "JUPUSDT",
+      "timeframe": "4H",
+      "top": 0.1479
+    },
     "KSMUSDT-4H-bullish-2026-08-14T04:00:00Z-2026-09-17T12:00:00Z": {
       "atr": 0.12529999999999997,
       "bos_time": "2026-09-17T12:00:00Z",
@@ -2251,6 +2387,33 @@
       "timeframe": "4H",
       "top": 2.079
     },
+    "NEOUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T00:00:00Z": {
+      "atr": 0.04579999999999995,
+      "bos_time": "2026-09-19T00:00:00Z",
+      "bottom": 2.028,
+      "created_at": "2026-09-19T00:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-09-14T00:00:00Z",
+      "id": "NEOUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T00:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-16T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "status": "armed",
+      "symbol": "NEOUSDT",
+      "timeframe": "4H",
+      "top": 2.079
+    },
     "ONDOUSDT-4H-bearish-2026-09-14T16:00:00Z-2026-09-15T04:00:00Z": {
       "atr": 0.006454999999999997,
       "bos_time": "2026-09-15T04:00:00Z",
@@ -2362,6 +2525,33 @@
         "BOS",
         "FVG",
         "strong BOS",
+        "compact zone"
+      ],
+      "score": 4,
+      "status": "armed",
+      "symbol": "ONDOUSDT",
+      "timeframe": "4H",
+      "top": 0.328
+    },
+    "ONDOUSDT-4H-bullish-2026-09-16T00:00:00Z-2026-09-19T00:00:00Z": {
+      "atr": 0.011930000000000001,
+      "bos_time": "2026-09-19T00:00:00Z",
+      "bottom": 0.3226,
+      "created_at": "2026-09-19T00:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-08-25T00:00:00Z",
+      "id": "ONDOUSDT-4H-bullish-2026-09-16T00:00:00Z-2026-09-19T00:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-16T00:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
         "compact zone"
       ],
       "score": 4,
@@ -3051,6 +3241,34 @@
       "timeframe": "4H",
       "top": 0.02547
     },
+    "SUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T00:00:00Z": {
+      "atr": 0.0010449999999999995,
+      "bos_time": "2026-09-19T00:00:00Z",
+      "bottom": 0.02475,
+      "created_at": "2026-09-19T00:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-08-26T20:00:00Z",
+      "id": "SUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T00:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-16T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "status": "armed",
+      "symbol": "SUSDT",
+      "timeframe": "4H",
+      "top": 0.02547
+    },
     "THETAUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T12:00:00Z": {
       "atr": 0.005275,
       "bos_time": "2026-09-17T12:00:00Z",
@@ -3119,6 +3337,34 @@
       "id": "THETAUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-18T08:00:00Z",
       "last_checked_at": "2026-09-19T03:18:53.136125+00:00",
       "last_price": 0.2217,
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-16T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "status": "armed",
+      "symbol": "THETAUSDT",
+      "timeframe": "4H",
+      "top": 0.179
+    },
+    "THETAUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T00:00:00Z": {
+      "atr": 0.006204999999999997,
+      "bos_time": "2026-09-19T00:00:00Z",
+      "bottom": 0.1721,
+      "created_at": "2026-09-19T00:00:00Z",
+      "direction": "bullish",
+      "fractal_time": "2026-09-13T08:00:00Z",
+      "id": "THETAUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T00:00:00Z",
       "notifications": {
         "approach": false,
         "confirmed": false,

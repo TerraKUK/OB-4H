@@ -5598,7 +5598,7 @@
       "last_price": 23.27,
       "notifications": {
         "approach": true,
-        "confirmed": false,
+        "confirmed": true,
         "new": true,
         "touch": true
       },
@@ -5611,7 +5611,7 @@
       ],
       "score": 4,
       "stage": "confirmed",
-      "status": "touched",
+      "status": "confirmed",
       "symbol": "COMPUSDT",
       "timeframe": "4H",
       "top": 23.42,
@@ -7235,6 +7235,32 @@
       "symbol": "EGLDUSDT",
       "timeframe": "4H",
       "top": 4.397
+    },
+    "EGLDUSDT-4H-bullish-2026-09-23T20:00:00Z-forming": {
+      "atr": 0.2208499999999999,
+      "bos_level": 4.605,
+      "bottom": 4.103,
+      "created_at": "2026-09-24T04:00:00Z",
+      "detected_at": "2026-09-24T04:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.0912383971021085,
+      "fractal_time": "2026-09-23T12:00:00Z",
+      "id": "EGLDUSDT-4H-bullish-2026-09-23T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-09-23T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "EGLDUSDT",
+      "timeframe": "4H",
+      "top": 4.237
     },
     "ENAUSDT-4H-bearish-2026-09-19T16:00:00Z-forming": {
       "atr": 0.008955000000000003,
@@ -19072,6 +19098,32 @@
       "symbol": "SKYUSDT",
       "timeframe": "4H",
       "top": 0.06782
+    },
+    "SKYUSDT-4H-bullish-2026-09-24T00:00:00Z-forming": {
+      "atr": 0.002264499999999998,
+      "bos_level": 0.07664,
+      "bottom": 0.06889,
+      "created_at": "2026-09-24T04:00:00Z",
+      "detected_at": "2026-09-24T04:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.0289247074409367,
+      "fractal_time": "2026-09-23T12:00:00Z",
+      "id": "SKYUSDT-4H-bullish-2026-09-24T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-09-24T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "SKYUSDT",
+      "timeframe": "4H",
+      "top": 0.06993
     },
     "SNXUSDT-4H-bearish-2026-09-06T12:00:00Z-2026-09-15T16:00:00Z": {
       "atr": 0.004785000000000002,

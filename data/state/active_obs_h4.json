@@ -4894,7 +4894,7 @@
       "last_price": 335.8,
       "notifications": {
         "approach": true,
-        "confirmed": false,
+        "confirmed": true,
         "new": true,
         "touch": true
       },
@@ -4907,7 +4907,7 @@
       ],
       "score": 4,
       "stage": "confirmed",
-      "status": "touched",
+      "status": "confirmed",
       "symbol": "BCHUSDT",
       "timeframe": "4H",
       "top": 335.8,
@@ -24901,6 +24901,32 @@
       "timeframe": "4H",
       "top": 0.07463
     },
+    "SKYUSDT-4H-bullish-2026-09-25T20:00:00Z-forming": {
+      "atr": 0.0028279999999999985,
+      "bos_level": 0.08027,
+      "bottom": 0.07556,
+      "created_at": "2026-09-26T04:00:00Z",
+      "detected_at": "2026-09-26T04:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.0572842998585552,
+      "fractal_time": "2026-05-10T16:00:00Z",
+      "id": "SKYUSDT-4H-bullish-2026-09-25T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-09-25T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "SKYUSDT",
+      "timeframe": "4H",
+      "top": 0.07656
+    },
     "SNXUSDT-4H-bearish-2026-09-06T12:00:00Z-2026-09-15T16:00:00Z": {
       "atr": 0.004785000000000002,
       "bos_time": "2026-09-15T16:00:00Z",
@@ -25513,6 +25539,32 @@
       "symbol": "SOLUSDT",
       "timeframe": "4H",
       "top": 116.08
+    },
+    "SOLUSDT-4H-bearish-2026-09-25T20:00:00Z-forming": {
+      "atr": 2.4754999999999994,
+      "bos_level": 115.75,
+      "bottom": 121.84,
+      "created_at": "2026-09-26T04:00:00Z",
+      "detected_at": "2026-09-26T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.0098969905069686,
+      "fractal_time": "2026-09-25T04:00:00Z",
+      "id": "SOLUSDT-4H-bearish-2026-09-25T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-09-25T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "SOLUSDT",
+      "timeframe": "4H",
+      "top": 122.91
     },
     "SOLUSDT-4H-bullish-2026-09-20T00:00:00Z-2026-09-21T08:00:00Z": {
       "atr": 2.2614999999999994,
@@ -26643,6 +26695,32 @@
       "symbol": "THETAUSDT",
       "timeframe": "4H",
       "top": 0.2205
+    },
+    "THETAUSDT-4H-bearish-2026-09-25T20:00:00Z-forming": {
+      "atr": 0.00701,
+      "bos_level": 0.2304,
+      "bottom": 0.2336,
+      "created_at": "2026-09-26T04:00:00Z",
+      "detected_at": "2026-09-26T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.0699001426533494,
+      "fractal_time": "2026-09-26T00:00:00Z",
+      "id": "THETAUSDT-4H-bearish-2026-09-25T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-09-25T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "THETAUSDT",
+      "timeframe": "4H",
+      "top": 0.239
     },
     "THETAUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T12:00:00Z": {
       "atr": 0.005275,

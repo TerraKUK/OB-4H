@@ -14259,7 +14259,7 @@
       "last_price": 1.1763,
       "notifications": {
         "approach": true,
-        "confirmed": false,
+        "confirmed": true,
         "new": true,
         "touch": true
       },
@@ -14272,7 +14272,7 @@
       ],
       "score": 4,
       "stage": "confirmed",
-      "status": "touched",
+      "status": "confirmed",
       "symbol": "DOTUSDT",
       "timeframe": "4H",
       "top": 1.1814,
@@ -25197,6 +25197,32 @@
       "timeframe": "4H",
       "top": 0.337
     },
+    "JUPUSDT-4H-bearish-2026-10-01T00:00:00Z-forming": {
+      "atr": 0.015759999999999996,
+      "bos_level": 0.3169,
+      "bottom": 0.3295,
+      "created_at": "2026-10-01T12:00:00Z",
+      "detected_at": "2026-10-01T12:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.0152284263959368,
+      "fractal_time": "2026-09-29T00:00:00Z",
+      "id": "JUPUSDT-4H-bearish-2026-10-01T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-10-01T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "JUPUSDT",
+      "timeframe": "4H",
+      "top": 0.3334
+    },
     "JUPUSDT-4H-bullish-2026-06-10T20:00:00Z-2026-09-19T00:00:00Z": {
       "atr": 0.008769999999999997,
       "bos_time": "2026-09-19T00:00:00Z",
@@ -34148,6 +34174,32 @@
       "symbol": "QNTUSDT",
       "timeframe": "4H",
       "top": 48.76
+    },
+    "QNTUSDT-4H-bearish-2026-10-01T08:00:00Z-forming": {
+      "atr": 1.0390000000000008,
+      "bos_level": 47.26,
+      "bottom": 48.68,
+      "created_at": "2026-10-01T12:00:00Z",
+      "detected_at": "2026-10-01T12:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 2.1270452358036565,
+      "fractal_time": "2026-09-24T12:00:00Z",
+      "id": "QNTUSDT-4H-bearish-2026-10-01T08:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-10-01T08:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "QNTUSDT",
+      "timeframe": "4H",
+      "top": 49.6
     },
     "QNTUSDT-4H-bullish-2026-09-14T08:00:00Z-2026-09-16T12:00:00Z": {
       "atr": 1.086000000000001,

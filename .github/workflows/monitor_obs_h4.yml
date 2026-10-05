@@ -2,7 +2,7 @@ name: Monitor Active H4 Order Blocks
 
 on:
   schedule:
-    - cron: "7 * * * *"
+    - cron: "7,37 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -12,7 +12,7 @@ on:
         type: boolean
 
 concurrency:
-  group: h4-ob-state
+  group: h4-shared-state
   cancel-in-progress: false
 
 permissions:

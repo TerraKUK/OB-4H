@@ -10,6 +10,8 @@ from pathlib import Path
 import pandas as pd
 import requests
 
+from h4_data_quality import validate_h4_frame
+
 from download_data import API_BASE_URL, PAIRS, REQUEST_DELAY_SECONDS, instrument_id
 
 RAW_DATA_DIR = Path("data/raw_h4")
@@ -65,19 +67,23 @@ def normalize(rows: list[list[str]]) -> pd.DataFrame:
 def main() -> None:
     cutoff = pd.Timestamp.now(tz="UTC") - pd.Timedelta(days=DAYS_BACK)
     for symbol in PAIRS:
+        output = RAW_DATA_DIR / f"{symbol}_{FILE_INTERVAL}.csv"
         try:
             frame = normalize(fetch_candles(symbol))
             frame = frame[frame["ts"] >= cutoff]
             if frame.empty:
+                output.unlink(missing_ok=True)
                 print(f"Skip {symbol}: no 4H candles")
                 continue
-            output = RAW_DATA_DIR / f"{symbol}_{FILE_INTERVAL}.csv"
+            validate_h4_frame(frame)
             frame.to_csv(output, index=False)
             print(f"Saved {symbol}: {len(frame)} candles -> {output}")
         except requests.HTTPError as error:
+            output.unlink(missing_ok=True)
             status = error.response.status_code if error.response is not None else "unknown"
             print(f"Skip {symbol}: OKX HTTP {status}")
         except Exception as error:
+            output.unlink(missing_ok=True)
             print(f"Skip {symbol}: {error}")
 
 

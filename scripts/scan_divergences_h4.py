@@ -5,12 +5,12 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
-from urllib.parse import quote
 
 import pandas as pd
 
 from divergence_detector import find_regular_rsi_divergences
-from telegram_client import send_message
+from telegram_client import send_message, send_digest
+from h4_data_quality import validate_h4_frame
 
 RAW_DATA_DIR = Path("data/raw_h4")
 STATE_PATH = Path("data/state/rsi_divergences_h4.json")
@@ -47,9 +47,6 @@ def format_price(value: float) -> str:
     return f"{value:.8f}".rstrip("0").rstrip(".")
 
 
-def tradingview_url(symbol: str) -> str:
-    return f"https://www.tradingview.com/chart/?symbol={quote(f'OKX:{symbol}.P')}&interval=240"
-
 
 def display_time(value: str) -> str:
     return as_utc(value).strftime("%d.%m %H:%M UTC")
@@ -57,14 +54,11 @@ def display_time(value: str) -> str:
 
 def format_digest(signals: list[dict]) -> str:
     lines = [f"🟣 Новые regular RSI-дивергенции (OKX Swap, 4H): {len(signals)}"]
-    for signal in signals[:10]:
+    for signal in signals:
         icon = "🟢" if signal["direction"] == "bullish" else "🔴"
         direction = "Bull" if signal["direction"] == "bullish" else "Bear"
         lines.append(f"{icon} {signal['symbol']} {direction} | цена {format_price(signal['first_price'])} → {format_price(signal['price'])} | RSI {signal['first_rsi']:.1f} → {signal['rsi']:.1f}")
         lines.append(f"Подтверждена: {display_time(signal['confirmed_time'])}")
-        lines.append(f"📈 {tradingview_url(signal['symbol'])}")
-    if len(signals) > 10:
-        lines.append(f"…ещё {len(signals) - 10} сигналов сохранены без повторного уведомления.")
     return "\n".join(lines)
 
 
@@ -75,7 +69,12 @@ def main() -> None:
     new_signals: list[dict] = []
     for csv_path in sorted(RAW_DATA_DIR.glob("*_4h.csv")):
         symbol = csv_path.name.removesuffix("_4h.csv")
-        frame = pd.read_csv(csv_path, parse_dates=["ts"])
+        try:
+            frame = pd.read_csv(csv_path, parse_dates=["ts"])
+            validate_h4_frame(frame)
+        except (ValueError, KeyError, OSError) as error:
+            print(f"Skip {symbol}: unusable H4 data: {error}")
+            continue
         if "confirm" in frame.columns:
             frame = frame[frame["confirm"].astype(int) == 1].reset_index(drop=True)
         if len(frame) < RSI_PERIOD + PIVOT_LEFT + PIVOT_RIGHT + MAX_BARS:
@@ -93,7 +92,7 @@ def main() -> None:
             new_signals.append(signal)
             print(f"NEW {signal['id']}")
     if new_signals:
-        send_message(format_digest(new_signals), DRY_RUN)
+        send_digest(new_signals, format_digest, DRY_RUN)
     else:
         print("No new confirmed 4H RSI divergences")
     if not DRY_RUN:

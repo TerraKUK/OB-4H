@@ -30,3 +30,21 @@ def send_message(text: str, dry_run: bool = False) -> bool:
             description = response.text
         raise RuntimeError(f"Telegram sendMessage failed: {description}") from error
     return True
+
+
+def send_digest(items, formatter, dry_run=False):
+    """Deliver every entry, keeping each message below Telegram's size limit."""
+    batch = []
+    for item in items:
+        candidate = batch + [item]
+        if len(formatter(candidate).encode("utf-16-le")) // 2 > 4000:
+            if not batch:
+                raise ValueError("A single digest entry exceeds Telegram's message limit")
+            send_message(formatter(batch), dry_run)
+            batch = [item]
+            if len(formatter(batch).encode("utf-16-le")) // 2 > 4000:
+                raise ValueError("A single digest entry exceeds Telegram's message limit")
+        else:
+            batch = candidate
+    if batch:
+        send_message(formatter(batch), dry_run)

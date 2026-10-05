@@ -5,12 +5,12 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
-from urllib.parse import quote
 
 import pandas as pd
 
 from ob_detector import find_all_obs, find_forming_obs, has_been_touched_or_invalidated
-from telegram_client import send_message
+from telegram_client import send_message, send_digest
+from h4_data_quality import validate_h4_frame
 
 RAW_DATA_DIR = Path("data/raw_h4")
 STATE_PATH = Path("data/state/active_obs_h4.json")
@@ -46,9 +46,6 @@ def format_price(value: float) -> str:
     return f"{value:,.8f}".rstrip("0").rstrip(".")
 
 
-def tradingview_url(symbol: str) -> str:
-    return f"https://www.tradingview.com/chart/?symbol={quote(f'OKX:{symbol}.P')}&interval=240"
-
 
 def display_time(value: str) -> str:
     return as_utc(value).strftime("%d.%m %H:%M UTC")
@@ -56,17 +53,14 @@ def display_time(value: str) -> str:
 
 def format_new_digest(zones: list[dict]) -> str:
     lines = [f"📊 Новые сильные OB (OKX Swap, 4H): {len(zones)}"]
-    for zone in zones[:10]:
+    for zone in zones:
         icon = "🟢" if zone["direction"] == "bullish" else "🔴"
         lines.append(
             f"{icon} {zone['symbol']} {zone['direction']} | "
             f"{format_price(zone['bottom'])}–{format_price(zone['top'])} | {zone['score']}/5\n"
             f"OB: {display_time(zone['ob_time'])} | BOS: {display_time(zone['bos_time'])}\n"
-            f"📈 {tradingview_url(zone['symbol'])}"
         )
-    if len(zones) > 10:
-        lines.append(f"…ещё {len(zones) - 10} зон сохранены для мониторинга.")
-    lines.append("Зоны добавлены в почасовой мониторинг первого касания.")
+    lines.append("Зоны добавлены в мониторинг первого касания каждые 30 минут.")
     return "\n".join(lines)
 
 
@@ -79,7 +73,6 @@ def format_forming_message(zone: dict) -> str:
         f"Импульс: {zone['displacement_atr']:.2f} ATR | "
         f"BOS ещё не подтверждён: {format_price(zone['bos_level'])}\n"
         f"Базовая свеча: {display_time(zone['ob_time'])}\n"
-        f"📈 {tradingview_url(zone['symbol'])}\n"
         "Раннее предупреждение, не готовый сигнал на вход."
     )
 
@@ -89,7 +82,6 @@ def format_confirmation_message(zone: dict, close: float) -> str:
         f"✅ Подтверждение реакции — {zone['symbol']} (OKX Swap, 4H)\n"
         f"{zone['direction']} OB: {format_price(zone['bottom'])} – {format_price(zone['top'])}\n"
         f"Закрытие H4: {format_price(close)}\n"
-        f"📈 {tradingview_url(zone['symbol'])}\n"
         "Зона была протестирована, а закрытая H4-свеча завершилась в ожидаемую сторону."
     )
 
@@ -101,6 +93,9 @@ def update_confirmations(state: dict, frames: dict[str, pd.DataFrame]) -> bool:
             continue
         frame = frames.get(zone["symbol"])
         if frame is None or frame.empty:
+            continue
+        closed_at = as_utc(str(frame.iloc[-1]["ts"])) + pd.Timedelta(hours=4)
+        if not zone.get("touched_at") or closed_at < as_utc(zone["touched_at"]):
             continue
         close = float(frame.iloc[-1]["close"])
         confirmed = (zone["direction"] == "bullish" and close > zone["top"]) or (
@@ -125,7 +120,12 @@ def main() -> None:
     changed = False
     for path in sorted(RAW_DATA_DIR.glob("*_4h.csv")):
         symbol = path.name.removesuffix("_4h.csv")
-        live_frame = pd.read_csv(path, parse_dates=["ts"])
+        try:
+            live_frame = pd.read_csv(path, parse_dates=["ts"])
+            validate_h4_frame(live_frame)
+        except (ValueError, KeyError, OSError) as error:
+            print(f"Skip {symbol}: unusable H4 data: {error}")
+            continue
         frame = live_frame
         if "confirm" in frame.columns:
             frame = frame[frame["confirm"].astype(int) == 1].reset_index(drop=True)
@@ -187,7 +187,7 @@ def main() -> None:
             zone["expired_at"] = now.isoformat()
             changed = True
     if new_zones:
-        send_message(format_new_digest(new_zones), DRY_RUN)
+        send_digest(new_zones, format_new_digest, DRY_RUN)
     changed = update_confirmations(state, frames) or changed
     if changed and not DRY_RUN:
         save_state(state)

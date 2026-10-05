@@ -18,5 +18,5 @@ jobs:
           curl --fail --silent --show-error --request POST \
             "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
-            --data-urlencode "text=✅ H4-бот подключён. Здесь будут новые подтверждённые regular RSI-дивергенции по OKX USDT perpetual swaps (4H). Пример графика: https://www.tradingview.com/chart/?symbol=OKX%3ABTCUSDT.P&interval=240" \
+            --data-urlencode "text=✅ H4-бот подключён. Здесь будут новые Order Blocks и уведомления о приближении, касании и пробое зон OKX USDT perpetual swaps (4H)." \
             --data-urlencode "disable_web_page_preview=true"

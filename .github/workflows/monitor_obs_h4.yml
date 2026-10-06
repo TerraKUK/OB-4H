@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -44,4 +46,4 @@ jobs:
             git add data/state/active_obs_h4.json
           fi
           git diff --cached --quiet || git commit -m "Update H4 Order Block monitor state"
-          git push
+          python scripts/push_state.py

@@ -6,6 +6,12 @@ import monitor_obs_h4 as monitor
 import scan_obs_h4 as scan
 
 class HistoryMonitorTests(unittest.TestCase):
+    def setUp(self):
+        # Recovery digests use telegram_client internally; never deliver in tests.
+        delivery = patch("telegram_client.send_message")
+        delivery.start()
+        self.addCleanup(delivery.stop)
+
     def zone(self):
         return dict(symbol="TESTUSDT", direction="bullish", bottom=100., top=110., atr=1., status="armed", bos_time="2026-10-05T00:00:00Z", notifications={})
 
@@ -78,5 +84,79 @@ class HistoryMonitorTests(unittest.TestCase):
         z=self.zone();z.update(score=4,ob_time=z["bos_time"],displacement_atr=1.,bos_level=120.)
         for text in [scan.format_new_digest([z]),scan.format_forming_message(z),scan.format_confirmation_message(z,120.)]:
             self.assertNotIn("tradingview",text)
+
+    def test_old_touch_then_breach_only_recovery(self):
+        z=self.zone(); now=datetime(2026,10,8,9,54,tzinfo=timezone.utc)
+        touch=datetime(2026,10,7,10,7,tzinfo=timezone.utc)
+        candles=[dict(ts=int(touch.timestamp()*1000),low=105.,high=115.),
+                 dict(ts=int(touch.timestamp()*1000)+60000,low=99.,high=108.)]
+        with patch.object(monitor,"send_message") as send, patch.object(monitor,"send_digest") as digest:
+            monitor.apply_observation(z,candles,105.,now)
+        send.assert_not_called()
+        lines=digest.call_args.args[0]
+        self.assertEqual(len(lines),1)
+        self.assertIn("пробой",lines[0])
+        self.assertNotIn("касание",lines[0])
+        self.assertEqual(z["status"],"invalidated")
+        self.assertEqual(z["invalidation_price"],99.)
+        self.assertEqual(z["touch_candle_at"],touch.isoformat())
+        self.assertTrue(z["notifications"]["touch"])
+
+    def test_fresh_touch_then_ticker_breach_suppresses_touch(self):
+        z=self.zone(); now=datetime(2026,10,8,9,54,tzinfo=timezone.utc)
+        candle=dict(ts=int(now.timestamp()*1000)-60000,low=105.,high=115.)
+        with patch.object(monitor,"send_message") as send:
+            monitor.apply_observation(z,[candle],99.,now)
+        self.assertEqual(send.call_count,1)
+        text=send.call_args.args[0]
+        self.assertIn("INVALIDATED",text)
+        self.assertIn(now.isoformat(),text)
+        self.assertIn("Пробитая граница: 100",text)
+        self.assertIn("при пробое: 99",text)
+
+    def test_old_touch_is_recorded_without_fresh_signal_or_duplicate(self):
+        z=self.zone(); now=datetime(2026,10,8,9,54,tzinfo=timezone.utc)
+        candle=dict(ts=int(now.timestamp()*1000)-24*3600000,low=105.,high=115.)
+        with patch.object(monitor,"send_message") as send, patch.object(monitor,"send_digest") as digest:
+            monitor.apply_observation(z,[candle],115.,now)
+        send.assert_not_called()
+        self.assertIn("касание",digest.call_args.args[0][0])
+        self.assertEqual(z["status"],"touched")
+        self.assertEqual(z["notifications"]["touch_suppressed"],"historical")
+        with patch.object(monitor,"send_message") as send, patch.object(monitor,"send_digest") as digest:
+            monitor.apply_observation(z,[candle],115.,now)
+        send.assert_not_called()
+        self.assertEqual(digest.call_args.args[0],[])
+
+    def test_bearish_fresh_breach_wins_in_same_minute(self):
+        z=self.zone(); z["direction"]="bearish"
+        now=datetime(2026,10,8,9,54,tzinfo=timezone.utc)
+        candle=dict(ts=int(now.timestamp()*1000)-60000,low=105.,high=111.)
+        with patch.object(monitor,"send_message") as send:
+            monitor.apply_observation(z,[candle],105.,now)
+        self.assertEqual(send.call_count,1)
+        self.assertIn("INVALIDATED",send.call_args.args[0])
+        self.assertEqual(z["invalidation_price"],111.)
+        self.assertNotIn("touch_candle_at",z)
+
+    def test_main_aggregates_old_events_across_expiry_boundary(self):
+        from datetime import timedelta
+        now=datetime.now(timezone.utc)
+        expiry=now-timedelta(hours=2)
+        z=self.zone(); z["bos_time"]=(expiry-timedelta(hours=monitor.MAX_ZONE_AGE_HOURS)).isoformat()
+        candles=[dict(ts=int((expiry-timedelta(minutes=2)).timestamp()*1000),low=105.,high=115.),
+                 dict(ts=int((expiry+timedelta(minutes=2)).timestamp()*1000),low=99.,high=108.)]
+        with patch.object(monitor,"load_state",return_value={"zones":{"test":z}}), \
+             patch.object(monitor,"fetch_history",return_value=candles), \
+             patch.object(monitor,"fetch_price",return_value=105.), \
+             patch.object(monitor,"save_state") as save, \
+             patch.object(monitor,"send_message") as send, \
+             patch.object(monitor,"send_digest") as digest:
+            monitor.main()
+        send.assert_not_called()
+        self.assertEqual(z["status"],"invalidated")
+        self.assertEqual(len(digest.call_args.args[0]),1)
+        self.assertIn("пробой",digest.call_args.args[0][0])
+        save.assert_called_once()
 
 if __name__=="__main__":unittest.main()

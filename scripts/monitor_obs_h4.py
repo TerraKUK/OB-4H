@@ -4,11 +4,12 @@ import os
 from datetime import datetime, timezone, timedelta
 import requests
 from scan_obs_h4 import format_price, load_state, save_state
-from telegram_client import send_message
+from telegram_client import send_message, send_digest
 API_BASE_URL = "https://www.okx.com"
 MAX_ZONE_AGE_HOURS = int(os.getenv("MAX_ZONE_AGE_HOURS", str(45 * 24)))
 DRY_RUN = os.getenv("DRY_RUN", "false").lower() == "true"
 MINUTE_MS = 60000
+ALERT_MAX_AGE_MINUTES = int(os.getenv("ALERT_MAX_AGE_MINUTES", "60"))
 
 def utc(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
@@ -63,47 +64,86 @@ def fetch_history(symbol, start_ms, end_ms):
 def message(kind, zone, price=None):
     icon = {"approach": "👀", "touch": "⚡", "invalidated": "⛔", "expired": "⌛"}[kind]
     text = f"{icon} {kind.upper()} — {zone['symbol']} (OKX Swap, 4H)\n{zone['direction']} OB: {format_price(zone['bottom'])} – {format_price(zone['top'])}"
+    if kind == "touch":
+        text += f"\nВремя касания (UTC): {zone.get('touch_candle_at') or zone.get('touched_at')}"
+    if kind == "invalidated":
+        boundary = zone["bottom"] if zone["direction"] == "bullish" else zone["top"]
+        text += f"\nВремя пробоя (UTC): {zone['invalidated_at']}\nПробитая граница: {format_price(boundary)}"
+        text += f"\nЦена / экстремум при пробое: {format_price(zone['invalidation_price'])}"
     if price is not None:
-        text += f"\nТекущая цена: {format_price(price)}"
-    if kind == "touch" and zone.get("touch_candle_at"):
-        text += f"\nКасание по минутной свече: {zone['touch_candle_at']}"
+        text += f"\nЦена при проверке ботом: {format_price(price)}"
     descriptions = {"approach": "Цена подошла к зоне. Это не сигнал на вход.", "touch": "Обнаружено первое касание зоны OB.", "invalidated": "Граница зоны пробита; наблюдение прекращено.", "expired": "Срок ожидания касания истёк; наблюдение прекращено."}
     return text + "\n" + descriptions[kind]
+
+
+def deliver_events(zone, events, price, now, recovered):
+    """Notify after replay: a terminal breach supersedes a pending touch."""
+    if zone["status"] == "invalidated":
+        events = [event for event in events if event[0] == "invalidated"]
+    for kind, event_at in events:
+        if now - event_at > timedelta(minutes=ALERT_MAX_AGE_MINUTES):
+            if kind == "touch":
+                zone.setdefault("notifications", {})["touch_suppressed"] = "historical"
+            label = {"touch": "касание", "invalidated": "пробой", "expired": "истечение срока"}[kind]
+            line = (f"{zone['symbol']} {zone['direction']} "
+                    f"{format_price(zone['bottom'])}–{format_price(zone['top'])}: "
+                    f"{label} {event_at.strftime('%d.%m %H:%M UTC')}")
+            if kind == "invalidated":
+                boundary = zone["bottom"] if zone["direction"] == "bullish" else zone["top"]
+                line += f"; граница {format_price(boundary)}, экстремум {format_price(zone['invalidation_price'])}"
+            recovered.append(line)
+        else:
+            send_message(message(kind, zone, price), DRY_RUN)
+
+
+def recovery_digest(lines):
+    return "🕘 Восстановлена история OB — это прошлые события, не новые сигналы.\n" + "\n".join(lines)
+
 
 def is_invalidated(zone, price):
     return (zone["direction"] == "bullish" and price < zone["bottom"]) or (zone["direction"] == "bearish" and price > zone["top"])
 
-def apply_observation(zone, candles, price, now):
-    """Replay candles chronologically; a boundary breach takes precedence within a minute."""
+def apply_observation(zone, candles, price, now, notify=True):
+    """Replay fully before delivery; a boundary breach wins within a minute."""
     notifications = zone.setdefault("notifications", {})
-    for candle in candles:
+    events = []
+    if zone["status"] not in {"armed", "touched"}:
+        return events
+    for candle in sorted(candles, key=lambda item: item["ts"]):
         breach = (zone["direction"] == "bullish" and candle["low"] < zone["bottom"]) or (zone["direction"] == "bearish" and candle["high"] > zone["top"])
         event_at = datetime.fromtimestamp(candle["ts"] / 1000, timezone.utc)
         if breach:
-            send_message(message("invalidated", zone, price), DRY_RUN)
-            zone.update(status="invalidated", invalidated_at=event_at.isoformat())
+            extreme = candle["low"] if zone["direction"] == "bullish" else candle["high"]
+            zone.update(status="invalidated", invalidated_at=event_at.isoformat(), invalidation_price=extreme)
+            events.append(("invalidated", event_at))
             break
         if candle["low"] <= zone["top"] and candle["high"] >= zone["bottom"] and not notifications.get("touch"):
             zone["touch_candle_at"] = event_at.isoformat()
-            send_message(message("touch", zone, price), DRY_RUN)
             zone.update(status="touched", touched_at=min(now, event_at + timedelta(minutes=1)).isoformat())
             notifications["touch"] = True
+            events.append(("touch", event_at))
     if zone["status"] != "invalidated" and price is not None:
         if is_invalidated(zone, price):
-            send_message(message("invalidated", zone, price), DRY_RUN)
-            zone.update(status="invalidated", invalidated_at=now.isoformat())
+            zone.update(status="invalidated", invalidated_at=now.isoformat(), invalidation_price=price)
+            events.append(("invalidated", now))
         elif zone["bottom"] <= price <= zone["top"] and not notifications.get("touch"):
-            send_message(message("touch", zone, price), DRY_RUN)
             zone.update(status="touched", touched_at=now.isoformat())
             notifications["touch"] = True
+            events.append(("touch", now))
         elif zone["status"] == "armed" and not notifications.get("approach"):
             distance = max(zone["bottom"] - price, price - zone["top"], 0.0)
             if distance <= max(float(zone.get("atr") or 0.0) * 0.5, zone["top"] * 0.002):
-                send_message(message("approach", zone, price), DRY_RUN)
                 notifications["approach"] = True
+                events.append(("approach", now))
     if price is not None:
         zone["last_price"] = price
     zone["last_checked_at"] = now.replace(second=0, microsecond=0).isoformat()
+    if notify:
+        recovered = []
+        deliver_events(zone, events, price, now, recovered)
+        send_digest(recovered, recovery_digest, DRY_RUN)
+    return events
+
 
 def main():
     state = load_state()
@@ -114,6 +154,7 @@ def main():
     for zone in active:
         by_symbol.setdefault(zone["symbol"], []).append(zone)
     changed = False
+    recovered = []
     for symbol, zones in by_symbol.items():
         try:
             start_ms = min(monitoring_start(z) for z in zones)
@@ -123,6 +164,7 @@ def main():
             print(f"Skip {symbol}: {error}")
             continue
         for zone in zones:
+            events = []
             start = monitoring_start(zone)
             # Stop replay at expiry so historical pre-expiry touches still count.
             expiry = utc(zone["bos_time"]) + timedelta(hours=MAX_ZONE_AGE_HOURS)
@@ -130,15 +172,17 @@ def main():
             if zone["status"] == "armed" and now > expiry:
                 if relevant:
                     historical_now = min(now, expiry)
-                    apply_observation(zone, relevant, None, historical_now)
+                    events.extend(apply_observation(zone, relevant, None, historical_now, notify=False))
                 if zone["status"] == "armed":
-                    send_message(message("expired", zone), DRY_RUN)
-                    zone.update(status="expired", expired_at=now.isoformat())
+                    zone.update(status="expired", expired_at=expiry.isoformat())
+                    events.append(("expired", expiry))
                 elif zone["status"] == "touched":
-                    apply_observation(zone, [c for c in candles if c["ts"] >= int(expiry.timestamp()*1000)], price, now)
+                    events.extend(apply_observation(zone, [c for c in candles if c["ts"] >= int(expiry.timestamp()*1000)], price, now, notify=False))
             else:
-                apply_observation(zone, relevant, price, now)
+                events.extend(apply_observation(zone, relevant, price, now, notify=False))
+            deliver_events(zone, events, price, now, recovered)
             changed = True
+    send_digest(recovered, recovery_digest, DRY_RUN)
     if changed and not DRY_RUN:
         save_state(state)
         print("H4 monitor state and cursors saved")

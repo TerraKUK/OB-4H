@@ -3803,29 +3803,31 @@
       "timeframe": "4H",
       "top": 0.1995
     },
-    "ADAUSDT-4H-bearish-2026-11-06T12:00:00Z-forming": {
-      "atr": 0.005610000000000002,
-      "bos_level": 0.1775,
+    "ADAUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.003555,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.1866,
-      "created_at": "2026-11-06T20:00:00Z",
-      "detected_at": "2026-11-06T20:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.0160427807486596,
-      "expired_at": "2026-11-07T15:45:04.110078+00:00",
       "fractal_time": "2026-11-05T20:00:00Z",
-      "id": "ADAUSDT-4H-bearish-2026-11-06T12:00:00Z-forming",
+      "id": "ADAUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
       "ob_time": "2026-11-06T12:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
       ],
-      "stage": "forming",
-      "status": "expired",
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "ADAUSDT",
       "timeframe": "4H",
       "top": 0.1896
@@ -3859,6 +3861,32 @@
       "symbol": "ADAUSDT",
       "timeframe": "4H",
       "top": 0.1856
+    },
+    "ADAUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.003470000000000001,
+      "bos_level": 0.171,
+      "bottom": 0.1752,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.4121037463976986,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "ADAUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "ADAUSDT",
+      "timeframe": "4H",
+      "top": 0.1786
     },
     "ADAUSDT-4H-bullish-2026-08-30T20:00:00Z-2026-09-19T00:00:00Z": {
       "atr": 0.0054850000000000055,
@@ -4982,21 +5010,49 @@
       "timeframe": "4H",
       "top": 0.6701
     },
-    "AEROUSDT-4H-bearish-2026-11-07T20:00:00Z-forming": {
-      "atr": 0.021604999999999996,
-      "bos_level": 0.5925,
+    "AEROUSDT-4H-bearish-2026-11-07T20:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.018729999999999997,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.6151,
-      "created_at": "2026-11-08T08:00:00Z",
-      "detected_at": "2026-11-08T08:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.527424207359404,
-      "fractal_time": "2026-11-07T12:00:00Z",
-      "id": "AEROUSDT-4H-bearish-2026-11-07T20:00:00Z-forming",
+      "fractal_time": "2026-11-05T12:00:00Z",
+      "id": "AEROUSDT-4H-bearish-2026-11-07T20:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-07T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "AEROUSDT",
+      "timeframe": "4H",
+      "top": 0.6345
+    },
+    "AEROUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.018335,
+      "bos_level": 0.5584,
+      "bottom": 0.5737,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.0089991818925592,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "AEROUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
       "notifications": {
         "confirmed": false,
         "forming": true
       },
-      "ob_time": "2026-11-07T20:00:00Z",
+      "ob_time": "2026-11-09T00:00:00Z",
       "reasons": [
         "opposite base candle",
         "bearish displacement",
@@ -5006,7 +5062,7 @@
       "status": "forming",
       "symbol": "AEROUSDT",
       "timeframe": "4H",
-      "top": 0.6345
+      "top": 0.5894
     },
     "AEROUSDT-4H-bullish-2026-10-06T00:00:00Z-forming": {
       "atr": 0.02237,
@@ -6446,21 +6502,49 @@
       "timeframe": "4H",
       "top": 0.09871
     },
-    "ALGOUSDT-4H-bearish-2026-11-08T08:00:00Z-forming": {
-      "atr": 0.002642000000000002,
-      "bos_level": 0.09314,
+    "ALGOUSDT-4H-bearish-2026-11-08T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.002406500000000001,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.09524,
-      "created_at": "2026-11-08T12:00:00Z",
-      "detected_at": "2026-11-08T12:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.0068130204390642,
       "fractal_time": "2026-11-07T12:00:00Z",
-      "id": "ALGOUSDT-4H-bearish-2026-11-08T08:00:00Z-forming",
+      "id": "ALGOUSDT-4H-bearish-2026-11-08T08:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-08T08:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ALGOUSDT",
+      "timeframe": "4H",
+      "top": 0.09639
+    },
+    "ALGOUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.0023270000000000005,
+      "bos_level": 0.08861,
+      "bottom": 0.0911,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.241942415126774,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "ALGOUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
       "notifications": {
         "confirmed": false,
         "forming": true
       },
-      "ob_time": "2026-11-08T08:00:00Z",
+      "ob_time": "2026-11-09T00:00:00Z",
       "reasons": [
         "opposite base candle",
         "bearish displacement",
@@ -6470,7 +6554,7 @@
       "status": "forming",
       "symbol": "ALGOUSDT",
       "timeframe": "4H",
-      "top": 0.09639
+      "top": 0.09322
     },
     "ALGOUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-19T08:00:00Z": {
       "atr": 0.0026620000000000003,
@@ -8237,6 +8321,32 @@
       "timeframe": "4H",
       "top": 0.11244
     },
+    "APEUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.002313999999999998,
+      "bos_level": 0.09838,
+      "bottom": 0.10182,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.140881590319789,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "APEUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "APEUSDT",
+      "timeframe": "4H",
+      "top": 0.10422
+    },
     "APEUSDT-4H-bullish-2026-06-10T20:00:00Z-2026-10-02T12:00:00Z": {
       "atr": 0.005608,
       "bos_time": "2026-10-02T12:00:00Z",
@@ -9702,6 +9812,35 @@
       "symbol": "APTUSDT",
       "timeframe": "4H",
       "top": 0.6476
+    },
+    "APTUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.013195000000000012,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.6125,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "APTUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "APTUSDT",
+      "timeframe": "4H",
+      "top": 0.6224
     },
     "APTUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-18T00:00:00Z": {
       "atr": 0.021134999999999998,
@@ -12576,6 +12715,58 @@
       "timeframe": "4H",
       "top": 0.15904
     },
+    "ARBUSDT-4H-bullish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.004707499999999996,
+      "bos_level": 0.17245,
+      "bottom": 0.16653,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.0260223048327148,
+      "fractal_time": "2026-11-04T12:00:00Z",
+      "id": "ARBUSDT-4H-bullish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "ARBUSDT",
+      "timeframe": "4H",
+      "top": 0.16987
+    },
+    "ARBUSDT-4H-bullish-2026-11-08T20:00:00Z-forming": {
+      "atr": 0.004441499999999996,
+      "bos_level": 0.17245,
+      "bottom": 0.15975,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 2.6139817629179376,
+      "fractal_time": "2026-11-04T12:00:00Z",
+      "id": "ARBUSDT-4H-bullish-2026-11-08T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "ARBUSDT",
+      "timeframe": "4H",
+      "top": 0.16663
+    },
     "ARUSDT-4H-bearish-2026-10-11T16:00:00Z-2026-10-12T20:00:00Z": {
       "atr": 0.12325000000000001,
       "bos_time": "2026-10-12T20:00:00Z",
@@ -13024,6 +13215,58 @@
       "symbol": "ARUSDT",
       "timeframe": "4H",
       "top": 3.096
+    },
+    "ARUSDT-4H-bullish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.08800000000000005,
+      "bos_level": 3.2,
+      "bottom": 3.07,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.1136363636363664,
+      "fractal_time": "2026-11-08T00:00:00Z",
+      "id": "ARUSDT-4H-bullish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "ARUSDT",
+      "timeframe": "4H",
+      "top": 3.122
+    },
+    "ARUSDT-4H-bullish-2026-11-08T20:00:00Z-forming": {
+      "atr": 0.08160000000000005,
+      "bos_level": 3.2,
+      "bottom": 2.908,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 3.1862745098039227,
+      "fractal_time": "2026-11-08T00:00:00Z",
+      "id": "ARUSDT-4H-bullish-2026-11-08T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "ARUSDT",
+      "timeframe": "4H",
+      "top": 3.107
     },
     "ASTERUSDT-4H-bearish-2026-09-19T16:00:00Z-forming": {
       "atr": 0.01669,
@@ -13587,6 +13830,34 @@
       "timeframe": "4H",
       "top": 0.7044
     },
+    "ASTERUSDT-4H-bearish-2026-10-29T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.010160000000000013,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.7028,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-10-15T00:00:00Z",
+      "id": "ASTERUSDT-4H-bearish-2026-10-29T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-10-29T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ASTERUSDT",
+      "timeframe": "4H",
+      "top": 0.7321
+    },
     "ASTERUSDT-4H-bearish-2026-11-05T08:00:00Z-2026-11-06T16:00:00Z": {
       "atr": 0.010834999999999989,
       "bos_time": "2026-11-06T16:00:00Z",
@@ -13611,6 +13882,35 @@
         "compact zone"
       ],
       "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ASTERUSDT",
+      "timeframe": "4H",
+      "top": 0.7145
+    },
+    "ASTERUSDT-4H-bearish-2026-11-05T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.010160000000000013,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.7051,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-10-30T16:00:00Z",
+      "id": "ASTERUSDT-4H-bearish-2026-11-05T08:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-05T08:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
       "stage": "confirmed",
       "status": "armed",
       "symbol": "ASTERUSDT",
@@ -16712,6 +17012,58 @@
       "timeframe": "4H",
       "top": 8.806
     },
+    "AVAXUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 0.16095000000000015,
+      "bos_level": 7.745,
+      "bottom": 8.186,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.4165890027958965,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "AVAXUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "AVAXUSDT",
+      "timeframe": "4H",
+      "top": 8.251
+    },
+    "AVAXUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.15200000000000014,
+      "bos_level": 7.745,
+      "bottom": 7.934,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.4736842105263157,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "AVAXUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "AVAXUSDT",
+      "timeframe": "4H",
+      "top": 8.103
+    },
     "AVAXUSDT-4H-bullish-2026-06-19T16:00:00Z-2026-09-19T00:00:00Z": {
       "atr": 0.17390000000000003,
       "bos_time": "2026-09-19T00:00:00Z",
@@ -18277,6 +18629,35 @@
       "symbol": "AXSUSDT",
       "timeframe": "4H",
       "top": 0.8859
+    },
+    "AXSUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.01694000000000001,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.8562,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T12:00:00Z",
+      "id": "AXSUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "AXSUSDT",
+      "timeframe": "4H",
+      "top": 0.8682
     },
     "AXSUSDT-4H-bullish-2026-08-30T20:00:00Z-2026-09-18T00:00:00Z": {
       "atr": 0.019720000000000005,
@@ -19853,6 +20234,7 @@
       "detected_at": "2026-11-08T12:00:00Z",
       "direction": "bullish",
       "displacement_atr": 1.0593428151054445,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-07T08:00:00Z",
       "id": "BATUSDT-4H-bullish-2026-11-08T04:00:00Z-forming",
       "notifications": {
@@ -19866,10 +20248,36 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "BATUSDT",
       "timeframe": "4H",
       "top": 0.12113
+    },
+    "BATUSDT-4H-bullish-2026-11-08T20:00:00Z-forming": {
+      "atr": 0.003762500000000004,
+      "bos_level": 0.12562,
+      "bottom": 0.1154,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.817940199335546,
+      "fractal_time": "2026-11-08T16:00:00Z",
+      "id": "BATUSDT-4H-bullish-2026-11-08T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "BATUSDT",
+      "timeframe": "4H",
+      "top": 0.12195
     },
     "BCHUSDT-4H-bearish-2026-09-19T12:00:00Z-forming": {
       "atr": 6.924999999999999,
@@ -20858,6 +21266,32 @@
       "symbol": "BCHUSDT",
       "timeframe": "4H",
       "top": 258.33
+    },
+    "BCHUSDT-4H-bearish-2026-11-08T16:00:00Z-forming": {
+      "atr": 6.797000000000009,
+      "bos_level": 235.03,
+      "bottom": 245.45,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.4050316316021731,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "BCHUSDT-4H-bearish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "BCHUSDT",
+      "timeframe": "4H",
+      "top": 246.45
     },
     "BCHUSDT-4H-bullish-2026-06-24T16:00:00Z-2026-09-22T12:00:00Z": {
       "atr": 9.935000000000002,
@@ -23914,6 +24348,32 @@
       "timeframe": "4H",
       "top": 717.57
     },
+    "BNBUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 5.949499999999995,
+      "bos_level": 677.86,
+      "bottom": 684.76,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.6018152785948558,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "BNBUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "BNBUSDT",
+      "timeframe": "4H",
+      "top": 691.45
+    },
     "BNBUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-16T20:00:00Z": {
       "atr": 9.180000000000017,
       "bos_time": "2026-09-16T20:00:00Z",
@@ -24858,6 +25318,34 @@
       "timeframe": "4H",
       "top": 3.801e-06
     },
+    "BONKUSDT-4H-bearish-2026-09-23T04:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 6.664999999999996e-08,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 3.722e-06,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-09-17T20:00:00Z",
+      "id": "BONKUSDT-4H-bearish-2026-09-23T04:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-23T04:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "BONKUSDT",
+      "timeframe": "4H",
+      "top": 4.204e-06
+    },
     "BONKUSDT-4H-bearish-2026-09-27T20:00:00Z-forming": {
       "atr": 1.1544999999999997e-07,
       "bos_level": 3.385e-06,
@@ -25626,29 +26114,31 @@
       "timeframe": "4H",
       "top": 3.06e-06
     },
-    "BONKUSDT-4H-bearish-2026-11-06T12:00:00Z-forming": {
-      "atr": 1.0754999999999997e-07,
-      "bos_level": 2.747e-06,
+    "BONKUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 6.664999999999996e-08,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 2.909e-06,
-      "created_at": "2026-11-07T00:00:00Z",
-      "detected_at": "2026-11-07T00:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.190144119014411,
-      "expired_at": "2026-11-07T20:19:18.766471+00:00",
       "fractal_time": "2026-11-05T16:00:00Z",
-      "id": "BONKUSDT-4H-bearish-2026-11-06T12:00:00Z-forming",
+      "id": "BONKUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
       "ob_time": "2026-11-06T12:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
       ],
-      "stage": "forming",
-      "status": "expired",
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "BONKUSDT",
       "timeframe": "4H",
       "top": 2.952e-06
@@ -26709,6 +27199,35 @@
       "timeframe": "4H",
       "top": 87374.3
     },
+    "BTCUSDT-4H-bearish-2026-09-21T20:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 668.0399999999987,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 86451.7,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-09-16T16:00:00Z",
+      "id": "BTCUSDT-4H-bearish-2026-09-21T20:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-21T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "BTCUSDT",
+      "timeframe": "4H",
+      "top": 87374.3
+    },
     "BTCUSDT-4H-bearish-2026-09-23T00:00:00Z-2026-09-23T12:00:00Z": {
       "atr": 1134.830000000001,
       "bos_time": "2026-09-23T12:00:00Z",
@@ -27250,6 +27769,58 @@
       "symbol": "BTCUSDT",
       "timeframe": "4H",
       "top": 80624.4
+    },
+    "BTCUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 783.5699999999982,
+      "bos_level": 73385.0,
+      "bottom": 75939.0,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.7018262567479652,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "BTCUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "BTCUSDT",
+      "timeframe": "4H",
+      "top": 76160.0
+    },
+    "BTCUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 655.3549999999989,
+      "bos_level": 73385.0,
+      "bottom": 74818.1,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.8319841917739361,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "BTCUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "BTCUSDT",
+      "timeframe": "4H",
+      "top": 75564.0
     },
     "BTCUSDT-4H-bullish-2026-09-20T00:00:00Z-2026-09-21T08:00:00Z": {
       "atr": 975.3849999999999,
@@ -28440,32 +29011,33 @@
       "timeframe": "4H",
       "top": 0.10502
     },
-    "CCUSDT-4H-bearish-2026-11-06T04:00:00Z-forming": {
-      "atr": 0.0038120000000000007,
-      "bos_level": 0.09221,
-      "bottom": 0.09683,
-      "created_at": "2026-11-06T16:00:00Z",
-      "detected_at": "2026-11-06T16:00:00Z",
+    "CCUSDT-4H-bearish-2026-11-05T04:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.002765999999999999,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.10236,
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 2.7885624344176283,
-      "expired_at": "2026-11-07T08:49:13.750554+00:00",
-      "fractal_time": "2026-11-05T12:00:00Z",
-      "id": "CCUSDT-4H-bearish-2026-11-06T04:00:00Z-forming",
+      "fractal_time": "2026-10-30T00:00:00Z",
+      "id": "CCUSDT-4H-bearish-2026-11-05T04:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
-      "ob_time": "2026-11-06T04:00:00Z",
+      "ob_time": "2026-11-05T04:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
       ],
-      "stage": "forming",
-      "status": "expired",
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "CCUSDT",
       "timeframe": "4H",
-      "top": 0.10488
+      "top": 0.10502
     },
     "CCUSDT-4H-bullish-2026-10-05T12:00:00Z-forming": {
       "atr": 0.0031145,
@@ -28945,6 +29517,34 @@
       "timeframe": "4H",
       "top": 0.0984
     },
+    "CFXUSDT-4H-bearish-2026-10-11T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0007919999999999996,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.06549,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-08-19T04:00:00Z",
+      "id": "CFXUSDT-4H-bearish-2026-10-11T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-10-11T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "CFXUSDT",
+      "timeframe": "4H",
+      "top": 0.07272
+    },
     "CFXUSDT-4H-bearish-2026-10-18T08:00:00Z-2026-10-18T16:00:00Z": {
       "atr": 0.001473000000000001,
       "bos_time": "2026-10-18T16:00:00Z",
@@ -29211,6 +29811,32 @@
       "symbol": "CFXUSDT",
       "timeframe": "4H",
       "top": 0.04436
+    },
+    "CFXUSDT-4H-bearish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.0008764999999999995,
+      "bos_level": 0.03938,
+      "bottom": 0.04134,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.1523103251568712,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "CFXUSDT-4H-bearish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "CFXUSDT",
+      "timeframe": "4H",
+      "top": 0.04163
     },
     "CFXUSDT-4H-bullish-2026-08-06T00:00:00Z-2026-10-11T04:00:00Z": {
       "atr": 0.0031175,
@@ -30182,6 +30808,35 @@
       "symbol": "CHZUSDT",
       "timeframe": "4H",
       "top": 0.01246
+    },
+    "CHZUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.00021599999999999996,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.01161,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "CHZUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "CHZUSDT",
+      "timeframe": "4H",
+      "top": 0.01174
     },
     "CHZUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T16:00:00Z": {
       "atr": 0.00031399999999999993,
@@ -33419,6 +34074,32 @@
       "timeframe": "4H",
       "top": 0.05161
     },
+    "CROUSDT-4H-bearish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.0009215000000000011,
+      "bos_level": 0.04688,
+      "bottom": 0.04833,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.3673358654367833,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "CROUSDT-4H-bearish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "CROUSDT",
+      "timeframe": "4H",
+      "top": 0.04867
+    },
     "CROUSDT-4H-bullish-2026-10-07T12:00:00Z-forming": {
       "atr": 0.0014384999999999982,
       "bos_level": 0.06859,
@@ -34379,6 +35060,7 @@
       "detected_at": "2026-11-08T12:00:00Z",
       "direction": "bearish",
       "displacement_atr": 1.0428571428571383,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-05T20:00:00Z",
       "id": "CRVUSDT-4H-bearish-2026-11-08T04:00:00Z-forming",
       "notifications": {
@@ -34392,7 +35074,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "CRVUSDT",
       "timeframe": "4H",
       "top": 0.2663
@@ -36167,6 +36849,34 @@
       "timeframe": "4H",
       "top": 0.10432
     },
+    "DOGEUSDT-4H-bearish-2026-09-23T00:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0011249999999999975,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.10039,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-08-19T00:00:00Z",
+      "id": "DOGEUSDT-4H-bearish-2026-09-23T00:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-23T00:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "DOGEUSDT",
+      "timeframe": "4H",
+      "top": 0.10432
+    },
     "DOGEUSDT-4H-bearish-2026-09-26T12:00:00Z-forming": {
       "atr": 0.002589000000000001,
       "bos_level": 0.09525,
@@ -36891,6 +37601,61 @@
       "symbol": "DOGEUSDT",
       "timeframe": "4H",
       "top": 0.07714
+    },
+    "DOGEUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0011249999999999975,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.07261,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-06T04:00:00Z",
+      "id": "DOGEUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "DOGEUSDT",
+      "timeframe": "4H",
+      "top": 0.07332
+    },
+    "DOGEUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 0.001205999999999998,
+      "bos_level": 0.06701,
+      "bottom": 0.07124,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.741293532338315,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "DOGEUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "DOGEUSDT",
+      "timeframe": "4H",
+      "top": 0.07165
     },
     "DOGEUSDT-4H-bullish-2026-08-01T16:00:00Z-2026-09-22T00:00:00Z": {
       "atr": 0.002703500000000002,
@@ -38127,29 +38892,31 @@
       "timeframe": "4H",
       "top": 0.9611
     },
-    "DOTUSDT-4H-bearish-2026-11-06T12:00:00Z-forming": {
-      "atr": 0.02718,
-      "bos_level": 0.8856,
+    "DOTUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.02028000000000001,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.9302,
-      "created_at": "2026-11-06T20:00:00Z",
-      "detected_at": "2026-11-06T20:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.1331861662987468,
-      "expired_at": "2026-11-07T15:45:04.110078+00:00",
       "fractal_time": "2026-11-05T12:00:00Z",
-      "id": "DOTUSDT-4H-bearish-2026-11-06T12:00:00Z-forming",
+      "id": "DOTUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
       "ob_time": "2026-11-06T12:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
       ],
-      "stage": "forming",
-      "status": "expired",
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "DOTUSDT",
       "timeframe": "4H",
       "top": 0.9479
@@ -40053,6 +40820,7 @@
       "detected_at": "2026-11-08T04:00:00Z",
       "direction": "bearish",
       "displacement_atr": 1.7114093959731556,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-08-19T00:00:00Z",
       "id": "EGLDUSDT-4H-bearish-2026-11-07T16:00:00Z-forming",
       "notifications": {
@@ -40066,7 +40834,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "EGLDUSDT",
       "timeframe": "4H",
       "top": 3.146
@@ -40079,6 +40847,7 @@
       "detected_at": "2026-11-08T04:00:00Z",
       "direction": "bearish",
       "displacement_atr": 1.6765755053507745,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-08-19T00:00:00Z",
       "id": "EGLDUSDT-4H-bearish-2026-11-07T20:00:00Z-forming",
       "notifications": {
@@ -40092,7 +40861,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "EGLDUSDT",
       "timeframe": "4H",
       "top": 3.134
@@ -41286,6 +42055,34 @@
       "timeframe": "4H",
       "top": 3.305
     },
+    "EIGENUSDT-4H-bearish-2026-06-22T04:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.004250000000000004,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.2997,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-06-06T20:00:00Z",
+      "id": "EIGENUSDT-4H-bearish-2026-06-22T04:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-06-22T04:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "EIGENUSDT",
+      "timeframe": "4H",
+      "top": 0.3156
+    },
     "EIGENUSDT-4H-bearish-2026-10-20T00:00:00Z-forming": {
       "atr": 0.010994999999999996,
       "bos_level": 0.2314,
@@ -41561,6 +42358,32 @@
       "symbol": "EIGENUSDT",
       "timeframe": "4H",
       "top": 0.1763
+    },
+    "EIGENUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.004140000000000005,
+      "bos_level": 0.152,
+      "bottom": 0.1568,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.4492753623188401,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "EIGENUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "EIGENUSDT",
+      "timeframe": "4H",
+      "top": 0.1612
     },
     "EIGENUSDT-4H-bullish-2026-10-11T00:00:00Z-forming": {
       "atr": 0.008089999999999998,
@@ -41973,6 +42796,34 @@
       "symbol": "ENAUSDT",
       "timeframe": "4H",
       "top": 0.28596
+    },
+    "ENAUSDT-4H-bearish-2026-09-27T16:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0045130000000000005,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.27387,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-09-17T20:00:00Z",
+      "id": "ENAUSDT-4H-bearish-2026-09-27T16:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-27T16:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ENAUSDT",
+      "timeframe": "4H",
+      "top": 0.29482
     },
     "ENAUSDT-4H-bearish-2026-09-28T08:00:00Z-forming": {
       "atr": 0.012542999999999999,
@@ -46132,6 +46983,64 @@
       "timeframe": "4H",
       "top": 7.485
     },
+    "ETCUSDT-4H-bearish-2026-11-05T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.11599999999999996,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 7.346,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-04T00:00:00Z",
+      "id": "ETCUSDT-4H-bearish-2026-11-05T08:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-05T08:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ETCUSDT",
+      "timeframe": "4H",
+      "top": 7.485
+    },
+    "ETCUSDT-4H-bearish-2026-11-06T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.11599999999999996,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 6.975,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "ETCUSDT-4H-bearish-2026-11-06T08:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T08:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ETCUSDT",
+      "timeframe": "4H",
+      "top": 7.145
+    },
     "ETCUSDT-4H-bullish-2026-09-19T12:00:00Z-forming": {
       "atr": 0.18709999999999988,
       "bos_level": 9.026,
@@ -48330,6 +49239,64 @@
       "timeframe": "4H",
       "top": 2285.5
     },
+    "ETHUSDT-4H-bearish-2026-11-06T20:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 29.403500000000008,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 2234.76,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-06T12:00:00Z",
+      "id": "ETHUSDT-4H-bearish-2026-11-06T20:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ETHUSDT",
+      "timeframe": "4H",
+      "top": 2253.93
+    },
+    "ETHUSDT-4H-bearish-2026-11-08T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 29.403500000000008,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 2239.44,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-07T20:00:00Z",
+      "id": "ETHUSDT-4H-bearish-2026-11-08T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ETHUSDT",
+      "timeframe": "4H",
+      "top": 2245.08
+    },
     "ETHUSDT-4H-bullish-2026-09-17T20:00:00Z-2026-09-18T04:00:00Z": {
       "atr": 40.90949999999991,
       "bos_time": "2026-09-18T04:00:00Z",
@@ -49486,6 +50453,32 @@
       "timeframe": "4H",
       "top": 0.1508
     },
+    "FETUSDT-4H-bearish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.0036099999999999995,
+      "bos_level": 0.1341,
+      "bottom": 0.1419,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.0249307479224403,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "FETUSDT-4H-bearish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "FETUSDT",
+      "timeframe": "4H",
+      "top": 0.1431
+    },
     "FETUSDT-4H-bullish-2026-10-09T16:00:00Z-2026-10-11T12:00:00Z": {
       "atr": 0.008280000000000003,
       "bos_time": "2026-10-11T12:00:00Z",
@@ -50042,6 +51035,34 @@
       "symbol": "FILUSDT",
       "timeframe": "4H",
       "top": 1.0859
+    },
+    "FILUSDT-4H-bearish-2026-10-11T20:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.01860499999999999,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 1.1921,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-09-16T12:00:00Z",
+      "id": "FILUSDT-4H-bearish-2026-10-11T20:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-10-11T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "FILUSDT",
+      "timeframe": "4H",
+      "top": 1.2769
     },
     "FILUSDT-4H-bearish-2026-10-13T04:00:00Z-forming": {
       "atr": 0.05363499999999995,
@@ -52134,6 +53155,61 @@
       "timeframe": "4H",
       "top": 2.308e-05
     },
+    "FLOKIUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 3.9100000000000015e-07,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 2.183e-05,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T16:00:00Z",
+      "id": "FLOKIUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "FLOKIUSDT",
+      "timeframe": "4H",
+      "top": 2.212e-05
+    },
+    "FLOKIUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 4.3300000000000024e-07,
+      "bos_level": 2.014e-05,
+      "bottom": 2.124e-05,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.2702078521939943,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "FLOKIUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "FLOKIUSDT",
+      "timeframe": "4H",
+      "top": 2.14e-05
+    },
     "FLOKIUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T12:00:00Z": {
       "atr": 5.365000000000001e-07,
       "bos_time": "2026-09-17T12:00:00Z",
@@ -53614,6 +54690,34 @@
       "symbol": "GALAUSDT",
       "timeframe": "4H",
       "top": 0.001706
+    },
+    "GALAUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 3.615000000000002e-05,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.001602,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "GALAUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "GALAUSDT",
+      "timeframe": "4H",
+      "top": 0.001639
     },
     "GALAUSDT-4H-bullish-2026-08-19T08:00:00Z-2026-09-26T12:00:00Z": {
       "atr": 8.535000000000001e-05,
@@ -55434,6 +56538,35 @@
       "symbol": "GRAMUSDT",
       "timeframe": "4H",
       "top": 1.119
+    },
+    "GRAMUSDT-4H-bearish-2026-11-08T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.02230000000000002,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 1.062,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-08T00:00:00Z",
+      "id": "GRAMUSDT-4H-bearish-2026-11-08T08:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-08T08:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "GRAMUSDT",
+      "timeframe": "4H",
+      "top": 1.068
     },
     "GRAMUSDT-4H-bullish-2026-09-20T08:00:00Z-forming": {
       "atr": 0.021299999999999965,
@@ -57854,6 +58987,32 @@
       "timeframe": "4H",
       "top": 0.01935
     },
+    "GRTUSDT-4H-bearish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.00044700000000000035,
+      "bos_level": 0.01769,
+      "bottom": 0.01857,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.1856823266219212,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "GRTUSDT-4H-bearish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "GRTUSDT",
+      "timeframe": "4H",
+      "top": 0.01873
+    },
     "GRTUSDT-4H-bullish-2026-08-19T00:00:00Z-2026-09-18T20:00:00Z": {
       "atr": 0.0004919999999999996,
       "bos_time": "2026-09-18T20:00:00Z",
@@ -59803,6 +60962,35 @@
       "timeframe": "4H",
       "top": 0.06892
     },
+    "HBARUSDT-4H-bearish-2026-11-06T16:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.001140999999999999,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.0684,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "HBARUSDT-4H-bearish-2026-11-06T16:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T16:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "HBARUSDT",
+      "timeframe": "4H",
+      "top": 0.06892
+    },
     "HBARUSDT-4H-bullish-2026-08-16T20:00:00Z-2026-09-20T12:00:00Z": {
       "atr": 0.002451500000000001,
       "bos_time": "2026-09-20T12:00:00Z",
@@ -60671,6 +61859,35 @@
       "touch_candle_at": "2026-10-29T16:14:00+00:00",
       "touched_at": "2026-10-29T16:15:00+00:00"
     },
+    "HYPEUSDT-4H-bearish-2026-09-22T20:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 1.3714999999999988,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 96.243,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-09-15T16:00:00Z",
+      "id": "HYPEUSDT-4H-bearish-2026-09-22T20:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-22T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "HYPEUSDT",
+      "timeframe": "4H",
+      "top": 97.799
+    },
     "HYPEUSDT-4H-bearish-2026-09-23T16:00:00Z-forming": {
       "atr": 1.958100000000001,
       "bos_level": 90.172,
@@ -61475,6 +62692,34 @@
       "timeframe": "4H",
       "top": 77.485
     },
+    "HYPEUSDT-4H-bearish-2026-10-29T16:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 1.3714999999999988,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 93.93,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-10-26T00:00:00Z",
+      "id": "HYPEUSDT-4H-bearish-2026-10-29T16:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-10-29T16:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "HYPEUSDT",
+      "timeframe": "4H",
+      "top": 97.089
+    },
     "HYPEUSDT-4H-bearish-2026-10-30T08:00:00Z-forming": {
       "atr": 2.846349999999999,
       "bos_level": 88.454,
@@ -61666,6 +62911,64 @@
       "symbol": "HYPEUSDT",
       "timeframe": "4H",
       "top": 79.64
+    },
+    "HYPEUSDT-4H-bearish-2026-11-07T00:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 1.3714999999999988,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 78.549,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "HYPEUSDT-4H-bearish-2026-11-07T00:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-07T00:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "HYPEUSDT",
+      "timeframe": "4H",
+      "top": 79.64
+    },
+    "HYPEUSDT-4H-bearish-2026-11-08T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 1.3714999999999988,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 77.408,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-08T08:00:00Z",
+      "id": "HYPEUSDT-4H-bearish-2026-11-08T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "HYPEUSDT",
+      "timeframe": "4H",
+      "top": 78.142
     },
     "HYPEUSDT-4H-bullish-2026-09-16T20:00:00Z-2026-09-17T12:00:00Z": {
       "atr": 1.9487500000000018,
@@ -62995,6 +64298,35 @@
       "timeframe": "4H",
       "top": 3.609
     },
+    "ICPUSDT-4H-bearish-2026-10-05T20:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.05170000000000006,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 3.571,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-08-31T12:00:00Z",
+      "id": "ICPUSDT-4H-bearish-2026-10-05T20:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-10-05T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ICPUSDT",
+      "timeframe": "4H",
+      "top": 3.609
+    },
     "ICPUSDT-4H-bearish-2026-10-06T04:00:00Z-forming": {
       "atr": 0.09809999999999997,
       "bos_level": 3.226,
@@ -63311,6 +64643,35 @@
       "symbol": "ICPUSDT",
       "timeframe": "4H",
       "top": 2.505
+    },
+    "ICPUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.05170000000000006,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 2.456,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "ICPUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ICPUSDT",
+      "timeframe": "4H",
+      "top": 2.499
     },
     "ICPUSDT-4H-bullish-2026-08-01T20:00:00Z-2026-09-25T08:00:00Z": {
       "atr": 0.12394999999999996,
@@ -66240,6 +67601,58 @@
       "timeframe": "4H",
       "top": 0.11836
     },
+    "IMXUSDT-4H-bullish-2026-11-08T12:00:00Z-forming": {
+      "atr": 0.0031480000000000006,
+      "bos_level": 0.12453,
+      "bottom": 0.11885,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.667725540025414,
+      "fractal_time": "2026-11-08T16:00:00Z",
+      "id": "IMXUSDT-4H-bullish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "IMXUSDT",
+      "timeframe": "4H",
+      "top": 0.12145
+    },
+    "IMXUSDT-4H-bullish-2026-11-08T20:00:00Z-forming": {
+      "atr": 0.0030395000000000005,
+      "bos_level": 0.12453,
+      "bottom": 0.1149,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 3.0268136206612923,
+      "fractal_time": "2026-11-08T16:00:00Z",
+      "id": "IMXUSDT-4H-bullish-2026-11-08T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "IMXUSDT",
+      "timeframe": "4H",
+      "top": 0.12109
+    },
     "INJUSDT-4H-bearish-2026-09-14T16:00:00Z-2026-09-15T12:00:00Z": {
       "atr": 0.21469999999999997,
       "bos_time": "2026-09-15T12:00:00Z",
@@ -67915,6 +69328,32 @@
       "timeframe": "4H",
       "top": 8.389
     },
+    "INJUSDT-4H-bullish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.2528999999999998,
+      "bos_level": 8.284,
+      "bottom": 7.945,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.0676156583629886,
+      "fractal_time": "2026-11-08T08:00:00Z",
+      "id": "INJUSDT-4H-bullish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "INJUSDT",
+      "timeframe": "4H",
+      "top": 8.132
+    },
     "IOTAUSDT-4H-bearish-2026-10-13T04:00:00Z-forming": {
       "atr": 0.0014515000000000007,
       "bos_level": 0.04816,
@@ -69575,6 +71014,35 @@
       "timeframe": "4H",
       "top": 0.264
     },
+    "JUPUSDT-4H-bearish-2026-11-05T00:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.005495000000000007,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.26,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-10-30T00:00:00Z",
+      "id": "JUPUSDT-4H-bearish-2026-11-05T00:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-05T00:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "JUPUSDT",
+      "timeframe": "4H",
+      "top": 0.2662
+    },
     "JUPUSDT-4H-bullish-2026-06-10T20:00:00Z-2026-09-19T00:00:00Z": {
       "atr": 0.008769999999999997,
       "bos_time": "2026-09-19T00:00:00Z",
@@ -70721,6 +72189,34 @@
       "top": 0.03314,
       "touch_candle_at": "2026-11-03T14:48:00+00:00",
       "touched_at": "2026-11-03T14:49:00+00:00"
+    },
+    "KMNOUSDT-4H-bearish-2026-11-05T00:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0008489999999999997,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.03672,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-04T12:00:00Z",
+      "id": "KMNOUSDT-4H-bearish-2026-11-05T00:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-05T00:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "KMNOUSDT",
+      "timeframe": "4H",
+      "top": 0.03756
     },
     "KMNOUSDT-4H-bullish-2026-10-11T08:00:00Z-2026-10-11T16:00:00Z": {
       "atr": 0.0009460000000000003,
@@ -71911,6 +73407,7 @@
       "detected_at": "2026-11-08T12:00:00Z",
       "direction": "bearish",
       "displacement_atr": 1.3073538654934007,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-05T12:00:00Z",
       "id": "KSMUSDT-4H-bearish-2026-11-08T04:00:00Z-forming",
       "notifications": {
@@ -71924,7 +73421,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "KSMUSDT",
       "timeframe": "4H",
       "top": 3.233
@@ -74793,6 +76290,32 @@
       "timeframe": "4H",
       "top": 0.3305
     },
+    "LDOUSDT-4H-bullish-2026-11-08T20:00:00Z-forming": {
+      "atr": 0.007389999999999999,
+      "bos_level": 0.3283,
+      "bottom": 0.3012,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 2.692828146143434,
+      "fractal_time": "2026-11-07T16:00:00Z",
+      "id": "LDOUSDT-4H-bullish-2026-11-08T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "LDOUSDT",
+      "timeframe": "4H",
+      "top": 0.3198
+    },
     "LINKUSDT-4H-bearish-2026-09-19T12:00:00Z-2026-09-20T00:00:00Z": {
       "atr": 0.26609999999999995,
       "bos_time": "2026-09-20T00:00:00Z",
@@ -75008,6 +76531,34 @@
         "FVG",
         "strong BOS",
         "compact zone"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "LINKUSDT",
+      "timeframe": "4H",
+      "top": 15.609
+    },
+    "LINKUSDT-4H-bearish-2026-09-29T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.1926999999999998,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 15.198,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-09-16T16:00:00Z",
+      "id": "LINKUSDT-4H-bearish-2026-09-29T08:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-29T08:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
       ],
       "score": 4,
       "stage": "confirmed",
@@ -75490,6 +77041,32 @@
       "symbol": "LINKUSDT",
       "timeframe": "4H",
       "top": 11.65
+    },
+    "LINKUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.18969999999999976,
+      "bos_level": 10.124,
+      "bottom": 10.409,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.333684765419085,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "LINKUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "LINKUSDT",
+      "timeframe": "4H",
+      "top": 10.616
     },
     "LINKUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-18T00:00:00Z": {
       "atr": 0.2695,
@@ -76908,6 +78485,62 @@
       "symbol": "LITUSDT",
       "timeframe": "4H",
       "top": 3.5666
+    },
+    "LITUSDT-4H-bearish-2026-11-07T04:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.15974500000000003,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 3.4539,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-04T00:00:00Z",
+      "id": "LITUSDT-4H-bearish-2026-11-07T04:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-07T04:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "LITUSDT",
+      "timeframe": "4H",
+      "top": 3.5666
+    },
+    "LITUSDT-4H-bearish-2026-11-07T20:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.15974500000000003,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 3.2737,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-07T16:00:00Z",
+      "id": "LITUSDT-4H-bearish-2026-11-07T20:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-07T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "LITUSDT",
+      "timeframe": "4H",
+      "top": 3.3553
     },
     "LITUSDT-4H-bullish-2026-10-05T12:00:00Z-forming": {
       "atr": 0.13125,
@@ -80504,6 +82137,7 @@
       "detected_at": "2026-11-08T04:00:00Z",
       "direction": "bearish",
       "displacement_atr": 1.8036241045090633,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-06T20:00:00Z",
       "id": "METUSDT-4H-bearish-2026-11-07T20:00:00Z-forming",
       "notifications": {
@@ -80517,10 +82151,36 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "METUSDT",
       "timeframe": "4H",
       "top": 0.3355
+    },
+    "METUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.012605000000000002,
+      "bos_level": 0.2948,
+      "bottom": 0.3026,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.3248710829036132,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "METUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "METUSDT",
+      "timeframe": "4H",
+      "top": 0.3163
     },
     "METUSDT-4H-bullish-2026-10-13T00:00:00Z-forming": {
       "atr": 0.019855000000000005,
@@ -81792,6 +83452,34 @@
       "timeframe": "4H",
       "top": 2.2553
     },
+    "MORPHOUSDT-4H-bearish-2026-10-31T16:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.042505000000000036,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 2.3014,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-10-30T16:00:00Z",
+      "id": "MORPHOUSDT-4H-bearish-2026-10-31T16:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-10-31T16:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "MORPHOUSDT",
+      "timeframe": "4H",
+      "top": 2.4273
+    },
     "MORPHOUSDT-4H-bearish-2026-10-31T20:00:00Z-forming": {
       "atr": 0.08074500000000001,
       "bos_level": 2.0331,
@@ -82857,6 +84545,32 @@
       "top": 3.777,
       "touch_candle_at": "2026-11-07T23:42:00+00:00",
       "touched_at": "2026-11-07T23:43:00+00:00"
+    },
+    "NEARUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.09314999999999996,
+      "bos_level": 3.442,
+      "bottom": 3.585,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.3633923778851298,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "NEARUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "NEARUSDT",
+      "timeframe": "4H",
+      "top": 3.658
     },
     "NEARUSDT-4H-bullish-2026-08-11T12:00:00Z-2026-09-17T16:00:00Z": {
       "atr": 0.11319999999999997,
@@ -86530,6 +88244,34 @@
       "timeframe": "4H",
       "top": 0.040122
     },
+    "OKBUSDT-4H-bearish-2026-10-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 1.7859999999999978,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 130.41,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-08-22T04:00:00Z",
+      "id": "OKBUSDT-4H-bearish-2026-10-06T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-10-06T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "OKBUSDT",
+      "timeframe": "4H",
+      "top": 143.57
+    },
     "OKBUSDT-4H-bearish-2026-10-06T16:00:00Z-forming": {
       "atr": 2.570999999999999,
       "bos_level": 125.34,
@@ -87004,6 +88746,32 @@
       "timeframe": "4H",
       "top": 105.45
     },
+    "OKBUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 1.852999999999998,
+      "bos_level": 96.5,
+      "bottom": 102.15,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.7539125742039954,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "OKBUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "OKBUSDT",
+      "timeframe": "4H",
+      "top": 102.87
+    },
     "OKBUSDT-4H-bullish-2026-10-05T20:00:00Z-forming": {
       "atr": 1.4964999999999997,
       "bos_level": 134.5,
@@ -87228,6 +88996,7 @@
       "detected_at": "2026-11-08T12:00:00Z",
       "direction": "bullish",
       "displacement_atr": 1.0162802170695628,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-06T20:00:00Z",
       "id": "OKBUSDT-4H-bullish-2026-11-08T00:00:00Z-forming",
       "notifications": {
@@ -87241,7 +89010,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "OKBUSDT",
       "timeframe": "4H",
       "top": 101.86
@@ -90345,6 +92114,34 @@
       "timeframe": "4H",
       "top": 0.1043
     },
+    "PENDLEUSDT-4H-bearish-2026-09-21T00:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.033499999999999974,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 2.71,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-08-23T04:00:00Z",
+      "id": "PENDLEUSDT-4H-bearish-2026-09-21T00:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-21T00:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "PENDLEUSDT",
+      "timeframe": "4H",
+      "top": 2.795
+    },
     "PENDLEUSDT-4H-bearish-2026-10-12T04:00:00Z-2026-10-12T20:00:00Z": {
       "atr": 0.0502,
       "bos_time": "2026-10-12T20:00:00Z",
@@ -90690,6 +92487,35 @@
         "compact zone"
       ],
       "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "PENDLEUSDT",
+      "timeframe": "4H",
+      "top": 1.717
+    },
+    "PENDLEUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.033499999999999974,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 1.674,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T12:00:00Z",
+      "id": "PENDLEUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
       "stage": "confirmed",
       "status": "armed",
       "symbol": "PENDLEUSDT",
@@ -91436,6 +93262,35 @@
       "symbol": "PENGUUSDT",
       "timeframe": "4H",
       "top": 0.007288
+    },
+    "PENGUUSDT-4H-bearish-2026-11-08T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.00015035000000000005,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.006367,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-08T08:00:00Z",
+      "id": "PENGUUSDT-4H-bearish-2026-11-08T08:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-08T08:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "PENGUUSDT",
+      "timeframe": "4H",
+      "top": 0.006433
     },
     "PENGUUSDT-4H-bullish-2026-10-06T00:00:00Z-forming": {
       "atr": 0.0002464999999999999,
@@ -93338,6 +95193,7 @@
       "detected_at": "2026-11-08T08:00:00Z",
       "direction": "bullish",
       "displacement_atr": 1.2507624642845643,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-06T12:00:00Z",
       "id": "PEPEUSDT-4H-bullish-2026-11-07T20:00:00Z-forming",
       "notifications": {
@@ -93351,7 +95207,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "PEPEUSDT",
       "timeframe": "4H",
       "top": 4.867e-06
@@ -94196,6 +96052,7 @@
       "detected_at": "2026-11-08T12:00:00Z",
       "direction": "bullish",
       "displacement_atr": 1.3725789232880907,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-07T04:00:00Z",
       "id": "PIEVERSEUSDT-4H-bullish-2026-11-08T00:00:00Z-forming",
       "notifications": {
@@ -94209,10 +96066,62 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "PIEVERSEUSDT",
       "timeframe": "4H",
       "top": 1.4073
+    },
+    "PIEVERSEUSDT-4H-bullish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.06443999999999997,
+      "bos_level": 1.6509,
+      "bottom": 1.4754,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.9894475481067648,
+      "fractal_time": "2026-09-27T08:00:00Z",
+      "id": "PIEVERSEUSDT-4H-bullish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "4H",
+      "top": 1.504
+    },
+    "PIEVERSEUSDT-4H-bullish-2026-11-08T20:00:00Z-forming": {
+      "atr": 0.06368499999999995,
+      "bos_level": 1.6509,
+      "bottom": 1.4188,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 2.9017822093114547,
+      "fractal_time": "2026-09-27T08:00:00Z",
+      "id": "PIEVERSEUSDT-4H-bullish-2026-11-08T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "4H",
+      "top": 1.4775
     },
     "PIUSDT-4H-bearish-2026-08-22T00:00:00Z-2026-10-08T12:00:00Z": {
       "atr": 0.0019235000000000003,
@@ -94254,6 +96163,34 @@
       "id": "PIUSDT-4H-bearish-2026-08-22T00:00:00Z-2026-11-08T00:00:00Z",
       "last_checked_at": "2026-11-09T01:56:00+00:00",
       "last_price": 0.07013,
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-08-22T00:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "PIUSDT",
+      "timeframe": "4H",
+      "top": 0.10639
+    },
+    "PIUSDT-4H-bearish-2026-08-22T00:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.001395500000000001,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.09744,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-07-14T00:00:00Z",
+      "id": "PIUSDT-4H-bearish-2026-08-22T00:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
         "approach": false,
         "confirmed": false,
@@ -95008,29 +96945,31 @@
       "timeframe": "4H",
       "top": 0.07797
     },
-    "PIUSDT-4H-bearish-2026-11-05T08:00:00Z-forming": {
-      "atr": 0.0013975000000000016,
-      "bos_level": 0.07351,
+    "PIUSDT-4H-bearish-2026-11-05T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.001395500000000001,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.07676,
-      "created_at": "2026-11-05T20:00:00Z",
-      "detected_at": "2026-11-05T20:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.474060822898035,
-      "expired_at": "2026-11-06T15:59:16.328944+00:00",
-      "fractal_time": "2026-11-05T12:00:00Z",
-      "id": "PIUSDT-4H-bearish-2026-11-05T08:00:00Z-forming",
+      "fractal_time": "2026-11-04T00:00:00Z",
+      "id": "PIUSDT-4H-bearish-2026-11-05T08:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
       "ob_time": "2026-11-05T08:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
       ],
-      "stage": "forming",
-      "status": "expired",
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "PIUSDT",
       "timeframe": "4H",
       "top": 0.07724
@@ -95066,28 +97005,31 @@
       "timeframe": "4H",
       "top": 0.07514
     },
-    "PIUSDT-4H-bearish-2026-11-08T04:00:00Z-forming": {
-      "atr": 0.0012210000000000012,
-      "bos_level": 0.07145,
+    "PIUSDT-4H-bearish-2026-11-08T04:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.001395500000000001,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.07294,
-      "created_at": "2026-11-08T12:00:00Z",
-      "detected_at": "2026-11-08T12:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.2285012285012284,
       "fractal_time": "2026-11-08T00:00:00Z",
-      "id": "PIUSDT-4H-bearish-2026-11-08T04:00:00Z-forming",
+      "id": "PIUSDT-4H-bearish-2026-11-08T04:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
       "ob_time": "2026-11-08T04:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
       ],
-      "stage": "forming",
-      "status": "forming",
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "PIUSDT",
       "timeframe": "4H",
       "top": 0.07335
@@ -95940,29 +97882,30 @@
       "touch_candle_at": "2026-11-03T15:47:00+00:00",
       "touched_at": "2026-11-03T15:48:00+00:00"
     },
-    "POLUSDT-4H-bearish-2026-11-05T08:00:00Z-forming": {
-      "atr": 0.0021944999999999985,
-      "bos_level": 0.09112,
+    "POLUSDT-4H-bearish-2026-11-05T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.001639500000000002,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.09693,
-      "created_at": "2026-11-05T20:00:00Z",
-      "detected_at": "2026-11-05T20:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 3.4632034632034636,
-      "expired_at": "2026-11-06T15:59:16.328944+00:00",
-      "fractal_time": "2026-11-05T12:00:00Z",
-      "id": "POLUSDT-4H-bearish-2026-11-05T08:00:00Z-forming",
+      "fractal_time": "2026-11-04T00:00:00Z",
+      "id": "POLUSDT-4H-bearish-2026-11-05T08:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
       "ob_time": "2026-11-05T08:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
       ],
-      "stage": "forming",
-      "status": "expired",
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "POLUSDT",
       "timeframe": "4H",
       "top": 0.1002
@@ -98433,6 +100376,32 @@
       "timeframe": "4H",
       "top": 0.003943
     },
+    "PUMPUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 0.00013844999999999998,
+      "bos_level": 0.003472,
+      "bottom": 0.003683,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.1412062116287482,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "PUMPUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "PUMPUSDT",
+      "timeframe": "4H",
+      "top": 0.003771
+    },
     "PUMPUSDT-4H-bullish-2026-09-16T00:00:00Z-2026-09-17T00:00:00Z": {
       "atr": 0.00014745000000000006,
       "bos_time": "2026-09-17T00:00:00Z",
@@ -98505,7 +100474,7 @@
       "last_price": 0.003635,
       "notifications": {
         "approach": false,
-        "confirmed": false,
+        "confirmed": true,
         "new": true,
         "touch": true
       },
@@ -98519,7 +100488,7 @@
       ],
       "score": 5,
       "stage": "confirmed",
-      "status": "touched",
+      "status": "confirmed",
       "symbol": "PUMPUSDT",
       "timeframe": "4H",
       "top": 0.003515,
@@ -98538,7 +100507,7 @@
       "last_price": 0.003635,
       "notifications": {
         "approach": false,
-        "confirmed": false,
+        "confirmed": true,
         "new": true,
         "touch": true
       },
@@ -98552,7 +100521,7 @@
       ],
       "score": 5,
       "stage": "confirmed",
-      "status": "touched",
+      "status": "confirmed",
       "symbol": "PUMPUSDT",
       "timeframe": "4H",
       "top": 0.003515,
@@ -98571,7 +100540,7 @@
       "last_price": 0.003635,
       "notifications": {
         "approach": true,
-        "confirmed": false,
+        "confirmed": true,
         "new": true,
         "touch": true
       },
@@ -98585,7 +100554,7 @@
       ],
       "score": 5,
       "stage": "confirmed",
-      "status": "touched",
+      "status": "confirmed",
       "symbol": "PUMPUSDT",
       "timeframe": "4H",
       "top": 0.003515,
@@ -101481,6 +103450,35 @@
       "timeframe": "4H",
       "top": 1.0636
     },
+    "QTUMUSDT-4H-bearish-2026-09-26T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.01154,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 1.0544,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-08-19T12:00:00Z",
+      "id": "QTUMUSDT-4H-bearish-2026-09-26T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-26T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "QTUMUSDT",
+      "timeframe": "4H",
+      "top": 1.0636
+    },
     "QTUMUSDT-4H-bearish-2026-09-27T20:00:00Z-forming": {
       "atr": 0.02637499999999999,
       "bos_level": 0.9372,
@@ -103444,6 +105442,61 @@
       "symbol": "RAYUSDT",
       "timeframe": "4H",
       "top": 1.546
+    },
+    "RAYUSDT-4H-bearish-2026-11-07T20:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.05306500000000003,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 1.7785,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-07T08:00:00Z",
+      "id": "RAYUSDT-4H-bearish-2026-11-07T20:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-07T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "RAYUSDT",
+      "timeframe": "4H",
+      "top": 1.8244
+    },
+    "RAYUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.05168500000000002,
+      "bos_level": 1.6339,
+      "bottom": 1.6809,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.124117248718197,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "RAYUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "RAYUSDT",
+      "timeframe": "4H",
+      "top": 1.7173
     },
     "RAYUSDT-4H-bullish-2026-10-05T12:00:00Z-forming": {
       "atr": 0.06635500000000005,
@@ -105537,6 +107590,58 @@
       "symbol": "RENDERUSDT",
       "timeframe": "4H",
       "top": 1.532
+    },
+    "RENDERUSDT-4H-bullish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.044500000000000026,
+      "bos_level": 1.581,
+      "bottom": 1.528,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.0337078651685396,
+      "fractal_time": "2026-11-08T12:00:00Z",
+      "id": "RENDERUSDT-4H-bullish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "RENDERUSDT",
+      "timeframe": "4H",
+      "top": 1.559
+    },
+    "RENDERUSDT-4H-bullish-2026-11-08T20:00:00Z-forming": {
+      "atr": 0.04195000000000003,
+      "bos_level": 1.581,
+      "bottom": 1.472,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 2.4314660309892733,
+      "fractal_time": "2026-11-08T12:00:00Z",
+      "id": "RENDERUSDT-4H-bullish-2026-11-08T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "RENDERUSDT",
+      "timeframe": "4H",
+      "top": 1.556
     },
     "SANDUSDT-4H-bearish-2026-09-14T16:00:00Z-2026-09-15T12:00:00Z": {
       "atr": 0.0006495000000000008,
@@ -107730,6 +109835,35 @@
       "timeframe": "4H",
       "top": 0.04922
     },
+    "SEIUSDT-4H-bearish-2026-11-06T16:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0009639999999999996,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.04698,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "SEIUSDT-4H-bearish-2026-11-06T16:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T16:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "SEIUSDT",
+      "timeframe": "4H",
+      "top": 0.04742
+    },
     "SEIUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-16T20:00:00Z": {
       "atr": 0.0009149999999999998,
       "bos_time": "2026-09-16T20:00:00Z",
@@ -108741,6 +110875,34 @@
         "FVG",
         "strong BOS",
         "compact zone"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "SHIBUSDT",
+      "timeframe": "4H",
+      "top": 6.242e-06
+    },
+    "SHIBUSDT-4H-bearish-2026-09-23T00:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 6.95000000000001e-08,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 6.107e-06,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-08-19T12:00:00Z",
+      "id": "SHIBUSDT-4H-bearish-2026-09-23T00:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-09-23T00:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
       ],
       "score": 4,
       "stage": "confirmed",
@@ -111077,29 +113239,31 @@
       "timeframe": "4H",
       "top": 0.06822
     },
-    "SKYUSDT-4H-bearish-2026-11-06T08:00:00Z-forming": {
-      "atr": 0.0015849999999999983,
-      "bos_level": 0.06277,
+    "SKYUSDT-4H-bearish-2026-11-06T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0010785,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.06573,
-      "created_at": "2026-11-06T20:00:00Z",
-      "detected_at": "2026-11-06T20:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.1167192429022055,
-      "expired_at": "2026-11-07T15:45:04.110078+00:00",
       "fractal_time": "2026-11-05T20:00:00Z",
-      "id": "SKYUSDT-4H-bearish-2026-11-06T08:00:00Z-forming",
+      "id": "SKYUSDT-4H-bearish-2026-11-06T08:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
       "ob_time": "2026-11-06T08:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
       ],
-      "stage": "forming",
-      "status": "expired",
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "SKYUSDT",
       "timeframe": "4H",
       "top": 0.06662
@@ -113072,6 +115236,60 @@
       "timeframe": "4H",
       "top": 0.182
     },
+    "SNXUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0034999999999999988,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.17,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "SNXUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T12:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "SNXUSDT",
+      "timeframe": "4H",
+      "top": 0.1738
+    },
+    "SNXUSDT-4H-bearish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.0039549999999999984,
+      "bos_level": 0.1548,
+      "bottom": 0.1615,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.5929203539823016,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "SNXUSDT-4H-bearish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "SNXUSDT",
+      "timeframe": "4H",
+      "top": 0.1623
+    },
     "SNXUSDT-4H-bullish-2026-08-19T04:00:00Z-2026-09-23T00:00:00Z": {
       "atr": 0.007000000000000002,
       "bos_time": "2026-09-23T00:00:00Z",
@@ -114846,6 +117064,32 @@
       "timeframe": "4H",
       "top": 97.04
     },
+    "SOLUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 1.463500000000002,
+      "bos_level": 84.81,
+      "bottom": 89.66,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.6877348821318725,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "SOLUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "SOLUSDT",
+      "timeframe": "4H",
+      "top": 89.89
+    },
     "SOLUSDT-4H-bullish-2026-09-20T00:00:00Z-2026-09-21T08:00:00Z": {
       "atr": 2.2614999999999994,
       "bos_time": "2026-09-21T08:00:00Z",
@@ -115809,6 +118053,58 @@
       "symbol": "SPXUSDT",
       "timeframe": "4H",
       "top": 0.3833
+    },
+    "SPXUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 0.010679999999999995,
+      "bos_level": 0.3334,
+      "bottom": 0.354,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.3202247191011243,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "SPXUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "SPXUSDT",
+      "timeframe": "4H",
+      "top": 0.3633
+    },
+    "SPXUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.009854999999999997,
+      "bos_level": 0.3334,
+      "bottom": 0.3419,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.5017757483510892,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "SPXUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "SPXUSDT",
+      "timeframe": "4H",
+      "top": 0.3535
     },
     "SPXUSDT-4H-bullish-2026-10-11T00:00:00Z-forming": {
       "atr": 0.009664999999999998,
@@ -117201,6 +119497,58 @@
       "timeframe": "4H",
       "top": 0.02514
     },
+    "STABLEUSDT-4H-bullish-2026-11-08T12:00:00Z-forming": {
+      "atr": 0.0008145000000000004,
+      "bos_level": 0.02716,
+      "bottom": 0.02583,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.32596685082873,
+      "fractal_time": "2026-11-07T08:00:00Z",
+      "id": "STABLEUSDT-4H-bullish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "STABLEUSDT",
+      "timeframe": "4H",
+      "top": 0.02628
+    },
+    "STABLEUSDT-4H-bullish-2026-11-08T20:00:00Z-forming": {
+      "atr": 0.0007405000000000007,
+      "bos_level": 0.02716,
+      "bottom": 0.02593,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 1.3234301147873022,
+      "fractal_time": "2026-11-07T08:00:00Z",
+      "id": "STABLEUSDT-4H-bullish-2026-11-08T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "STABLEUSDT",
+      "timeframe": "4H",
+      "top": 0.02657
+    },
     "STRKUSDT-4H-bearish-2026-10-11T16:00:00Z-forming": {
       "atr": 0.009401000000000001,
       "bos_level": 0.06901,
@@ -117227,6 +119575,34 @@
       "symbol": "STRKUSDT",
       "timeframe": "4H",
       "top": 0.123
+    },
+    "STRKUSDT-4H-bearish-2026-10-11T20:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0011454999999999996,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.12,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-09-24T08:00:00Z",
+      "id": "STRKUSDT-4H-bearish-2026-10-11T20:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-10-11T20:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "STRKUSDT",
+      "timeframe": "4H",
+      "top": 0.1268
     },
     "STRKUSDT-4H-bearish-2026-10-12T08:00:00Z-forming": {
       "atr": 0.010520499999999999,
@@ -117484,29 +119860,31 @@
       "timeframe": "4H",
       "top": 0.04506
     },
-    "STRKUSDT-4H-bearish-2026-11-07T04:00:00Z-forming": {
-      "atr": 0.0015949999999999998,
-      "bos_level": 0.03878,
+    "STRKUSDT-4H-bearish-2026-11-07T04:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0011454999999999996,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.04118,
-      "created_at": "2026-11-07T12:00:00Z",
-      "detected_at": "2026-11-07T12:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.4106583072100285,
-      "expired_at": "2026-11-08T07:22:48.241716+00:00",
-      "fractal_time": "2026-11-05T20:00:00Z",
-      "id": "STRKUSDT-4H-bearish-2026-11-07T04:00:00Z-forming",
+      "fractal_time": "2026-11-05T12:00:00Z",
+      "id": "STRKUSDT-4H-bearish-2026-11-07T04:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
       "ob_time": "2026-11-07T04:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
       ],
-      "stage": "forming",
-      "status": "expired",
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "STRKUSDT",
       "timeframe": "4H",
       "top": 0.04246
@@ -118082,6 +120460,32 @@
       "symbol": "STXUSDT",
       "timeframe": "4H",
       "top": 0.3516
+    },
+    "STXUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.010570000000000001,
+      "bos_level": 0.3147,
+      "bottom": 0.3182,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.0785241248817428,
+      "fractal_time": "2026-11-02T12:00:00Z",
+      "id": "STXUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "STXUSDT",
+      "timeframe": "4H",
+      "top": 0.3261
     },
     "STXUSDT-4H-bullish-2026-10-04T04:00:00Z-2026-10-07T04:00:00Z": {
       "atr": 0.012750000000000001,
@@ -120757,32 +123161,31 @@
       "timeframe": "4H",
       "top": 0.04106
     },
-    "SUSDT-4H-bearish-2026-11-06T12:00:00Z-forming": {
-      "atr": 0.0015745000000000006,
-      "bos_level": 0.03852,
-      "bottom": 0.03951,
-      "created_at": "2026-11-07T00:00:00Z",
-      "detected_at": "2026-11-07T00:00:00Z",
+    "SUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.0009679999999999998,
+      "bos_level": 0.03466,
+      "bottom": 0.03553,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.1368688472530957,
-      "expired_at": "2026-11-07T20:19:18.766471+00:00",
-      "fractal_time": "2026-11-06T20:00:00Z",
-      "id": "SUSDT-4H-bearish-2026-11-06T12:00:00Z-forming",
+      "displacement_atr": 1.2913223140495882,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "SUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
       "notifications": {
         "confirmed": false,
         "forming": true
       },
-      "ob_time": "2026-11-06T12:00:00Z",
+      "ob_time": "2026-11-09T00:00:00Z",
       "reasons": [
         "opposite base candle",
         "bearish displacement",
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "expired",
+      "status": "forming",
       "symbol": "SUSDT",
       "timeframe": "4H",
-      "top": 0.04081
+      "top": 0.03666
     },
     "SUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-18T00:00:00Z": {
       "atr": 0.0006969999999999999,
@@ -121908,6 +124311,34 @@
       "timeframe": "4H",
       "top": 0.2665
     },
+    "SYRUPUSDT-4H-bearish-2026-10-04T16:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0036699999999999984,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.2554,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-07-01T00:00:00Z",
+      "id": "SYRUPUSDT-4H-bearish-2026-10-04T16:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-10-04T16:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "SYRUPUSDT",
+      "timeframe": "4H",
+      "top": 0.2665
+    },
     "SYRUPUSDT-4H-bearish-2026-10-13T04:00:00Z-2026-10-14T12:00:00Z": {
       "atr": 0.009880000000000002,
       "bos_time": "2026-10-14T12:00:00Z",
@@ -122226,6 +124657,7 @@
       "detected_at": "2026-11-08T08:00:00Z",
       "direction": "bearish",
       "displacement_atr": 1.0084033613445378,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-07-01T00:00:00Z",
       "id": "SYRUPUSDT-4H-bearish-2026-11-07T20:00:00Z-forming",
       "notifications": {
@@ -122239,7 +124671,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "SYRUPUSDT",
       "timeframe": "4H",
       "top": 0.141
@@ -122935,6 +125367,58 @@
       "timeframe": "4H",
       "top": 222.05
     },
+    "TAOUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 4.933999999999996,
+      "bos_level": 210.64,
+      "bottom": 224.9,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.9031211998378585,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "TAOUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "TAOUSDT",
+      "timeframe": "4H",
+      "top": 226.54
+    },
+    "TAOUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 4.574,
+      "bos_level": 210.64,
+      "bottom": 216.9,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.329252295583737,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "TAOUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "TAOUSDT",
+      "timeframe": "4H",
+      "top": 220.77
+    },
     "TAOUSDT-4H-bullish-2026-10-11T00:00:00Z-forming": {
       "atr": 7.334999999999996,
       "bos_level": 294.2,
@@ -123132,6 +125616,7 @@
       "detected_at": "2026-11-08T12:00:00Z",
       "direction": "bullish",
       "displacement_atr": 1.0231845181069184,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-07T04:00:00Z",
       "id": "TAOUSDT-4H-bullish-2026-11-08T00:00:00Z-forming",
       "notifications": {
@@ -123145,7 +125630,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "TAOUSDT",
       "timeframe": "4H",
       "top": 223.36
@@ -123994,29 +126479,30 @@
       "timeframe": "4H",
       "top": 0.1578
     },
-    "THETAUSDT-4H-bearish-2026-11-06T16:00:00Z-forming": {
-      "atr": 0.004890000000000004,
-      "bos_level": 0.1468,
+    "THETAUSDT-4H-bearish-2026-11-06T16:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.003394999999999998,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.1508,
-      "created_at": "2026-11-07T04:00:00Z",
-      "detected_at": "2026-11-07T04:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.1247443762781189,
-      "expired_at": "2026-11-07T20:19:18.766471+00:00",
-      "fractal_time": "2026-11-07T00:00:00Z",
-      "id": "THETAUSDT-4H-bearish-2026-11-06T16:00:00Z-forming",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "THETAUSDT-4H-bearish-2026-11-06T16:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
       "ob_time": "2026-11-06T16:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "compact zone"
       ],
-      "stage": "forming",
-      "status": "expired",
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "THETAUSDT",
       "timeframe": "4H",
       "top": 0.1526
@@ -125747,6 +128233,7 @@
       "detected_at": "2026-11-08T08:00:00Z",
       "direction": "bearish",
       "displacement_atr": 1.127499180596525,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-05T20:00:00Z",
       "id": "TIAUSDT-4H-bearish-2026-11-07T20:00:00Z-forming",
       "notifications": {
@@ -125760,7 +128247,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "TIAUSDT",
       "timeframe": "4H",
       "top": 0.4434
@@ -126897,6 +129384,32 @@
       "timeframe": "4H",
       "top": 0.4214
     },
+    "TIAUSDT-4H-bullish-2026-11-08T20:00:00Z-forming": {
+      "atr": 0.012134999999999998,
+      "bos_level": 0.4483,
+      "bottom": 0.3973,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bullish",
+      "displacement_atr": 2.126081582200247,
+      "fractal_time": "2026-11-07T16:00:00Z",
+      "id": "TIAUSDT-4H-bullish-2026-11-08T20:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T20:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bullish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "TIAUSDT",
+      "timeframe": "4H",
+      "top": 0.422
+    },
     "TRUMPUSDT-4H-bearish-2026-09-23T00:00:00Z-2026-10-07T00:00:00Z": {
       "atr": 0.04545000000000006,
       "bos_time": "2026-10-07T00:00:00Z",
@@ -127231,6 +129744,32 @@
       "symbol": "TRUMPUSDT",
       "timeframe": "4H",
       "top": 1.276
+    },
+    "TRUMPUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 0.043950000000000024,
+      "bos_level": 1.102,
+      "bottom": 1.167,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.023890784982938,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "TRUMPUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "TRUMPUSDT",
+      "timeframe": "4H",
+      "top": 1.195
     },
     "TRUMPUSDT-4H-bullish-2026-10-07T16:00:00Z-forming": {
       "atr": 0.04815000000000004,
@@ -128570,6 +131109,32 @@
       "timeframe": "4H",
       "top": 0.32304
     },
+    "TRXUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 0.001208999999999985,
+      "bos_level": 0.31692,
+      "bottom": 0.32035,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.8114143920595966,
+      "fractal_time": "2026-11-07T00:00:00Z",
+      "id": "TRXUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "TRXUSDT",
+      "timeframe": "4H",
+      "top": 0.32062
+    },
     "TRXUSDT-4H-bullish-2026-09-15T16:00:00Z-2026-09-18T12:00:00Z": {
       "atr": 0.0017374999999999919,
       "bos_time": "2026-09-18T12:00:00Z",
@@ -129753,29 +132318,31 @@
       "timeframe": "4H",
       "top": 0.11305
     },
-    "UBUSDT-4H-bearish-2026-11-06T12:00:00Z-forming": {
-      "atr": 0.003803999999999997,
-      "bos_level": 0.10007,
+    "UBUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0029760000000000003,
+      "bos_time": "2026-11-08T20:00:00Z",
       "bottom": 0.11082,
-      "created_at": "2026-11-06T20:00:00Z",
-      "detected_at": "2026-11-06T20:00:00Z",
+      "created_at": "2026-11-08T20:00:00Z",
       "direction": "bearish",
-      "displacement_atr": 1.3117770767613035,
-      "expired_at": "2026-11-07T15:45:04.110078+00:00",
       "fractal_time": "2026-11-05T12:00:00Z",
-      "id": "UBUSDT-4H-bearish-2026-11-06T12:00:00Z-forming",
+      "id": "UBUSDT-4H-bearish-2026-11-06T12:00:00Z-2026-11-08T20:00:00Z",
       "notifications": {
+        "approach": false,
         "confirmed": false,
-        "forming": true
+        "new": true,
+        "touch": false
       },
       "ob_time": "2026-11-06T12:00:00Z",
       "reasons": [
-        "opposite base candle",
-        "bearish displacement",
-        "BOS pending"
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
       ],
-      "stage": "forming",
-      "status": "expired",
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
       "symbol": "UBUSDT",
       "timeframe": "4H",
       "top": 0.11356
@@ -129818,6 +132385,7 @@
       "detected_at": "2026-11-08T08:00:00Z",
       "direction": "bearish",
       "displacement_atr": 1.016856987493205,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-05T12:00:00Z",
       "id": "UBUSDT-4H-bearish-2026-11-07T20:00:00Z-forming",
       "notifications": {
@@ -129831,7 +132399,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "UBUSDT",
       "timeframe": "4H",
       "top": 0.10799
@@ -130729,6 +133297,32 @@
       "symbol": "UNIUSDT",
       "timeframe": "4H",
       "top": 7.817
+    },
+    "UNIUSDT-4H-bearish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.18464999999999998,
+      "bos_level": 6.616,
+      "bottom": 7.003,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.3484971567831014,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "UNIUSDT-4H-bearish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "UNIUSDT",
+      "timeframe": "4H",
+      "top": 7.036
     },
     "UNIUSDT-4H-bullish-2026-09-16T12:00:00Z-2026-09-17T04:00:00Z": {
       "atr": 0.30325,
@@ -132341,6 +134935,7 @@
       "detected_at": "2026-11-08T04:00:00Z",
       "direction": "bearish",
       "displacement_atr": 1.1356375254138822,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-07T12:00:00Z",
       "id": "USELESSUSDT-4H-bearish-2026-11-07T20:00:00Z-forming",
       "notifications": {
@@ -132354,7 +134949,7 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "USELESSUSDT",
       "timeframe": "4H",
       "top": 0.13737
@@ -133349,6 +135944,35 @@
       "timeframe": "4H",
       "top": 0.8831
     },
+    "VIRTUALUSDT-4H-bearish-2026-10-05T04:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.01144,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.8741,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-08-16T20:00:00Z",
+      "id": "VIRTUALUSDT-4H-bearish-2026-10-05T04:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-10-05T04:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "VIRTUALUSDT",
+      "timeframe": "4H",
+      "top": 0.8831
+    },
     "VIRTUALUSDT-4H-bearish-2026-10-12T04:00:00Z-2026-10-12T20:00:00Z": {
       "atr": 0.01738999999999998,
       "bos_time": "2026-10-12T20:00:00Z",
@@ -133707,6 +136331,61 @@
       "symbol": "VIRTUALUSDT",
       "timeframe": "4H",
       "top": 0.6046
+    },
+    "VIRTUALUSDT-4H-bearish-2026-11-06T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.01144,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.5718,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T12:00:00Z",
+      "id": "VIRTUALUSDT-4H-bearish-2026-11-06T08:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T08:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "VIRTUALUSDT",
+      "timeframe": "4H",
+      "top": 0.5816
+    },
+    "VIRTUALUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.010885,
+      "bos_level": 0.5155,
+      "bottom": 0.5362,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.313734497014248,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "VIRTUALUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "VIRTUALUSDT",
+      "timeframe": "4H",
+      "top": 0.547
     },
     "VIRTUALUSDT-4H-bullish-2026-10-19T12:00:00Z-forming": {
       "atr": 0.015380000000000022,
@@ -135775,6 +138454,61 @@
       "symbol": "WIFUSDT",
       "timeframe": "4H",
       "top": 0.1738
+    },
+    "WIFUSDT-4H-bearish-2026-11-06T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.003474999999999999,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.1649,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-05T20:00:00Z",
+      "id": "WIFUSDT-4H-bearish-2026-11-06T08:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-06T08:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "WIFUSDT",
+      "timeframe": "4H",
+      "top": 0.1679
+    },
+    "WIFUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.0033299999999999996,
+      "bos_level": 0.1503,
+      "bottom": 0.1549,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.141141141141149,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "WIFUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "WIFUSDT",
+      "timeframe": "4H",
+      "top": 0.1579
     },
     "WIFUSDT-4H-bullish-2026-09-20T08:00:00Z-2026-09-21T12:00:00Z": {
       "atr": 0.009324999999999998,
@@ -139171,6 +141905,32 @@
       "timeframe": "4H",
       "top": 0.04865
     },
+    "WLFIUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 0.0010955000000000016,
+      "bos_level": 0.04569,
+      "bottom": 0.04648,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.05887722501141,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "WLFIUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "WLFIUSDT",
+      "timeframe": "4H",
+      "top": 0.04716
+    },
     "WLFIUSDT-4H-bullish-2026-09-13T20:00:00Z-2026-09-16T20:00:00Z": {
       "atr": 0.000882500000000001,
       "bos_time": "2026-09-16T20:00:00Z",
@@ -139928,6 +142688,34 @@
       "timeframe": "4H",
       "top": 0.04608
     },
+    "XLMUSDT-4H-bearish-2026-05-30T00:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.0028144999999999963,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 0.2591,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-05-26T16:00:00Z",
+      "id": "XLMUSDT-4H-bearish-2026-05-30T00:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-05-30T00:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "XLMUSDT",
+      "timeframe": "4H",
+      "top": 0.2979
+    },
     "XLMUSDT-4H-bearish-2026-09-19T16:00:00Z-forming": {
       "atr": 0.00506,
       "bos_level": 0.19369,
@@ -140576,6 +143364,58 @@
       "symbol": "XLMUSDT",
       "timeframe": "4H",
       "top": 0.168
+    },
+    "XLMUSDT-4H-bearish-2026-11-08T12:00:00Z-forming": {
+      "atr": 0.003153499999999998,
+      "bos_level": 0.14277,
+      "bottom": 0.15094,
+      "created_at": "2026-11-09T00:00:00Z",
+      "detected_at": "2026-11-09T00:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.5189472015221246,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "XLMUSDT-4H-bearish-2026-11-08T12:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T12:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "XLMUSDT",
+      "timeframe": "4H",
+      "top": 0.15182
+    },
+    "XLMUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.002692499999999996,
+      "bos_level": 0.14277,
+      "bottom": 0.1463,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.3296193129062228,
+      "fractal_time": "2026-11-08T20:00:00Z",
+      "id": "XLMUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "XLMUSDT",
+      "timeframe": "4H",
+      "top": 0.14879
     },
     "XLMUSDT-4H-bullish-2026-09-02T08:00:00Z-2026-09-21T08:00:00Z": {
       "atr": 0.005555000000000003,
@@ -142589,6 +145429,35 @@
       "timeframe": "4H",
       "top": 1.3268
     },
+    "XRPUSDT-4H-bearish-2026-11-07T04:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 0.022089999999999988,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 1.1596,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-07T00:00:00Z",
+      "id": "XRPUSDT-4H-bearish-2026-11-07T04:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-07T04:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "EMA trend",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 5,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "XRPUSDT",
+      "timeframe": "4H",
+      "top": 1.1757
+    },
     "XRPUSDT-4H-bullish-2026-09-20T00:00:00Z-2026-09-21T08:00:00Z": {
       "atr": 0.032305000000000014,
       "bos_time": "2026-09-21T08:00:00Z",
@@ -144348,6 +147217,34 @@
       "timeframe": "4H",
       "top": 1364.0
     },
+    "ZECUSDT-4H-bearish-2026-11-08T08:00:00Z-2026-11-08T20:00:00Z": {
+      "atr": 45.2405,
+      "bos_time": "2026-11-08T20:00:00Z",
+      "bottom": 1263.01,
+      "created_at": "2026-11-08T20:00:00Z",
+      "direction": "bearish",
+      "fractal_time": "2026-11-07T20:00:00Z",
+      "id": "ZECUSDT-4H-bearish-2026-11-08T08:00:00Z-2026-11-08T20:00:00Z",
+      "notifications": {
+        "approach": false,
+        "confirmed": false,
+        "new": true,
+        "touch": false
+      },
+      "ob_time": "2026-11-08T08:00:00Z",
+      "reasons": [
+        "BOS",
+        "FVG",
+        "strong BOS",
+        "compact zone"
+      ],
+      "score": 4,
+      "stage": "confirmed",
+      "status": "armed",
+      "symbol": "ZECUSDT",
+      "timeframe": "4H",
+      "top": 1293.93
+    },
     "ZECUSDT-4H-bullish-2026-09-11T00:00:00Z-2026-09-16T20:00:00Z": {
       "atr": 57.69250000000001,
       "bos_time": "2026-09-16T20:00:00Z",
@@ -145487,6 +148384,7 @@
       "detected_at": "2026-11-08T12:00:00Z",
       "direction": "bearish",
       "displacement_atr": 1.0438571563891246,
+      "expired_at": "2026-11-09T06:24:12.619723+00:00",
       "fractal_time": "2026-11-06T04:00:00Z",
       "id": "ZROUSDT-4H-bearish-2026-11-08T08:00:00Z-forming",
       "notifications": {
@@ -145500,10 +148398,62 @@
         "BOS pending"
       ],
       "stage": "forming",
-      "status": "forming",
+      "status": "expired",
       "symbol": "ZROUSDT",
       "timeframe": "4H",
       "top": 1.64
+    },
+    "ZROUSDT-4H-bearish-2026-11-08T16:00:00Z-forming": {
+      "atr": 0.05088999999999997,
+      "bos_level": 1.4176,
+      "bottom": 1.5905,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 1.697779524464533,
+      "fractal_time": "2026-10-30T00:00:00Z",
+      "id": "ZROUSDT-4H-bearish-2026-11-08T16:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-08T16:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "ZROUSDT",
+      "timeframe": "4H",
+      "top": 1.6023
+    },
+    "ZROUSDT-4H-bearish-2026-11-09T00:00:00Z-forming": {
+      "atr": 0.04704499999999998,
+      "bos_level": 1.4176,
+      "bottom": 1.55,
+      "created_at": "2026-11-09T04:00:00Z",
+      "detected_at": "2026-11-09T04:00:00Z",
+      "direction": "bearish",
+      "displacement_atr": 2.274418110319907,
+      "fractal_time": "2026-10-30T00:00:00Z",
+      "id": "ZROUSDT-4H-bearish-2026-11-09T00:00:00Z-forming",
+      "notifications": {
+        "confirmed": false,
+        "forming": true
+      },
+      "ob_time": "2026-11-09T00:00:00Z",
+      "reasons": [
+        "opposite base candle",
+        "bearish displacement",
+        "BOS pending"
+      ],
+      "stage": "forming",
+      "status": "forming",
+      "symbol": "ZROUSDT",
+      "timeframe": "4H",
+      "top": 1.6229
     },
     "ZROUSDT-4H-bullish-2026-10-05T00:00:00Z-2026-10-05T20:00:00Z": {
       "atr": 0.10439999999999997,
